@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.response import Response
+from rest_framework.serializers import Serializer
 from rest_framework.views import APIView, status # check if works without (...).views
 
 from .models import *
@@ -18,7 +19,12 @@ class ToolListView(APIView):
 
   def get(self, request):
     tools = Tool.objects.all()
-    serialized_tools = ToolListSerializer(tools, many = True)
+    serialized_tools = PopulatedToolSerializer(tools, many = True)
     return Response(serialized_tools.data, status=status.HTTP_200_OK)
 
 
+class ToolDetailView(APIView):
+  def get(self, request, pk):
+    tool = Tool.objects.get(id=pk)
+    serialized_tool = PopulatedToolSerializer(tool)
+    return Response(serialized_tool.data, status=status.HTTP_200_OK)

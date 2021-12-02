@@ -6,4 +6,5 @@ from .views import *
 
 urlpatterns = [
   path('', ToolListView.as_view()),
+  path('<int:pk>/', ToolDetailView.as_view()),
 ]

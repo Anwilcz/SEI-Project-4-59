@@ -53,7 +53,7 @@ class ToolSerializer(serializers.ModelSerializer):
  
     return Tool
 
-class ToolListSerializer(serializers.ModelSerializer):
+class PopulatedToolSerializer(serializers.ModelSerializer):
   worked_with_company_size = WorkedWithCompanySizeSerializer(many=True, read_only=True)
   wants_to_work_with_company_size = WantsToWorkWithCompanySizeSerializer(many=True, read_only=True)
   worked_with_country = WorkedWithCountrySerializer(many=True, read_only=True)
