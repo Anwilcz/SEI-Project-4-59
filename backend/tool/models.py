@@ -2,6 +2,8 @@ from typing import Dict
 from django.db import models
 from django.db.models.deletion import CASCADE
 from django.db.models.fields import *
+from django.db.models.fields.related import ForeignKey
+from rest_framework import fields
 
 
 class Tool(models.Model):
@@ -34,13 +36,14 @@ class Tool(models.Model):
   linux_others = models.IntegerField(default=0)
   mac_os_others = models.IntegerField(default=0)
   windows_others = models.IntegerField(default=0)
+  # favourited = models.ManyToOneRel(ForeignKey, )
 
 
   def __str__(self):
     return f'{self.id} | Name: {self.name} | Category: {self.category}'
 
 class WorkedWithCompanySize(models.Model):
-  tool = models.ForeignKey(Tool, related_name='worked_with_company_size', on_delete=CASCADE, default=1)
+  tool = models.OneToOneField(Tool, related_name='worked_with_company_size', on_delete=CASCADE, default=1)
   _just_me = models.IntegerField(default=0)
   _2_to_9_employees = models.IntegerField(default=0)
   _10_to_19_employees = models.IntegerField(default=0)
@@ -52,7 +55,7 @@ class WorkedWithCompanySize(models.Model):
   _10000_or_more_employees = models.IntegerField(default=0)
 
 class WorkedWithCountry(models.Model):
-  tool = models.ForeignKey(Tool, related_name='worked_with_country', on_delete=CASCADE, default=1)
+  tool = models.OneToOneField(Tool, related_name='worked_with_country', on_delete=CASCADE, default=1)
   united_states_of_america = models.IntegerField(default=0)
   united_kingdom = models.IntegerField(default=0)
   india = models.IntegerField(default=0)
@@ -65,7 +68,7 @@ class WorkedWithCountry(models.Model):
   italy = models.IntegerField(default=0)
   
 class WantsToWorkWithCompanySize(models.Model):
-  tool = models.ForeignKey(Tool, related_name='wants_to_work_with_company_size', on_delete=CASCADE, default=1)
+  tool = models.OneToOneField(Tool, related_name='wants_to_work_with_company_size', on_delete=CASCADE, default=1)
   _just_me = models.IntegerField(default=0)
   _2_to_9_employees = models.IntegerField(default=0)
   _10_to_19_employees = models.IntegerField(default=0)
@@ -77,7 +80,7 @@ class WantsToWorkWithCompanySize(models.Model):
   _10000_or_more_employees = models.IntegerField(default=0)
 
 class WantsToWorkWithCountry(models.Model):
-  tool = models.ForeignKey(Tool, related_name='wants_to_work_with_country', on_delete=CASCADE, default=1)
+  tool = models.OneToOneField(Tool, related_name='wants_to_work_with_country', on_delete=CASCADE, default=1)
   united_states_of_america = models.IntegerField(default=0)
   united_kingdom = models.IntegerField(default=0)
   india = models.IntegerField(default=0)

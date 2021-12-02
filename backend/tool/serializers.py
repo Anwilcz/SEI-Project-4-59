@@ -54,13 +54,12 @@ class ToolSerializer(serializers.ModelSerializer):
     return Tool
 
 class PopulatedToolSerializer(serializers.ModelSerializer):
-  worked_with_company_size = WorkedWithCompanySizeSerializer(many=True, read_only=True)
-  wants_to_work_with_company_size = WantsToWorkWithCompanySizeSerializer(many=True, read_only=True)
-  worked_with_country = WorkedWithCountrySerializer(many=True, read_only=True)
-  wants_to_work_with_country = WantsToWorkWithCountrySerializer(many=True, read_only=True)
+  worked_with_company_size = WorkedWithCompanySizeSerializer(read_only=True)
+  wants_to_work_with_company_size = WantsToWorkWithCompanySizeSerializer(read_only=True)
+  worked_with_country = WorkedWithCountrySerializer(read_only=True)
+  wants_to_work_with_country = WantsToWorkWithCountrySerializer(read_only=True)
 
   class Meta:
     model = Tool
     fields = ['name', 'category', 'image', 'worked_with', 'worked_with_prof_devs', 'worked_others', 'worked_with_independent', 'worked_with_full_time', 'worked_with_part_time', 'worked_with_unemployed', 'worked_with_student', 'worked_with_prefer_not_to_say', 'worked_with_na', 'worked_with_company_size', 'worked_with_country', 'wants_to_work_with', 'wants_to_work_with_prof_devs', 'wants_to_work_with_others', 'wants_to_work_with_independent', 'wants_to_work_with_full_time', 'wants_to_work_with_part_time', 'wants_to_work_with_unemployed', 'wants_to_work_with_student', 'wants_to_work_with_prefer_not_to_say', 'wants_to_work_with_na', 'wants_to_work_with_company_size', 'wants_to_work_with_country', 'linux_prof_dev', 'mac_os_prof_dev', 'windows_prof_dev', 'linux_others', 'mac_os_others', 'windows_others']
-
 
