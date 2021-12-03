@@ -12,7 +12,7 @@ User = get_user_model()
 class ProfileSerializer(serializers.ModelSerializer):
   class Meta:
     model = Profile
-    exclude = ('id', 'user')
+    fields = '__all__'
   
 
 class UserSerializer(serializers.ModelSerializer):

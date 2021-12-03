@@ -36,8 +36,6 @@ class Tool(models.Model):
   linux_others = models.IntegerField(default=0)
   mac_os_others = models.IntegerField(default=0)
   windows_others = models.IntegerField(default=0)
-  # favourited = models.ManyToOneRel(ForeignKey, )
-
 
   def __str__(self):
     return f'{self.id} | Name: {self.name} | Category: {self.category}'
