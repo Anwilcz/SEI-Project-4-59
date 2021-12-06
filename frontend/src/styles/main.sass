@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200400600&display=swap')
 
-$blue-2: #00050A
+$blue-2: #02101F
 $blue-3: #001a35
 $blue-4: #002B54
 $blue-5: #003971
 $blue-6: #0062c4
+$blue-7: #3b9dff
 
 $yellow-1: #816300
-$yellow-2: #d8d1b9
+$yellow-2: #FAC104
 
 $white-1: #FFFFFF
 
@@ -22,11 +23,18 @@ $green-1: #0A6B00
 $green-2: #0E9000
 
 $shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px 0px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+$shadow-light: $white-1 0px 1px 5px -5px
 $radius: 5px
 $gradient: linear-gradient(132deg, $blue-3 -20%, $blue-6 100%)
+$gradient-2: linear-gradient(-48deg, $blue-6 -20%, $white-1 100%)
+
 $margin-1: 60px
 $margin-2: 30px
+$margin-3: 15px
 
+.margin-0 
+  margin: 0
+ 
 // ! Font family
 
 $family: 'Readex Pro', sans-serif
@@ -47,6 +55,17 @@ $family: 'Readex Pro', sans-serif
 .white
   color: $white-1
 
+.dark-blue
+  color: $blue-2
+
+.light-blue
+  color: $blue-7
+
+.gradient-text
+  background: $gradient-2
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
   //! Font size
 
 .large
@@ -66,6 +85,10 @@ $family: 'Readex Pro', sans-serif
 .indented
   margin-left: $margin-2
 
+.centered
+  margin: 0 auto
+  text-align: center
+
 
 
 @mixin text-header-2
@@ -82,6 +105,16 @@ $family: 'Readex Pro', sans-serif
   justify-content: center
   align-items: center
 
+@mixin popup-position
+  position: absolute
+  top: 0px
+  left: 0
+  width: 100vw
+  height: 100vh
+  
+
+// ! Page 
+
 *
   font-family: $family
 
@@ -93,7 +126,182 @@ body
 .content-wrapper
   width: 90%
   margin: 0 auto
-  padding-bottom: $margin-1
+  padding: $margin-1 0
+
+
+// ! Navbar
+
+.navbar-wrapper
+  position: fixed
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0px 20px
+  width: 100vw
+  top: 0
+  height: 60px
+  background: $blue-2
+  box-shadow: $shadow-light
+  z-index: 100
+  
+  .logo
+    height: 60px
+    display: flex
+    align-items: center
+
+    .chart-icon
+      height: 30px
+      width: 30px
+      background: $white-1
+      mask-image: url('/assets/chart.svg')
+      mask-size: 30px
+      margin-right: 15px
+
+  .menu
+    position: relative
+    min-width: 100px
+    height: 60px
+    display: inline-block
+    display: flex
+    align-items: center
+    margin-right: 50px
+
+    .user-icon
+      height: 30px
+      width: 30px
+      background-color: white
+      mask-image: url('/assets/user.svg')
+      mask-size: 30px
+      margin-right: 15px
+
+    .dropdown-content 
+      overflow: hidden
+      padding: 5px 0px
+      margin-top: 10px
+      min-width: 200px
+      border-radius: $radius
+      display: none
+      position: absolute
+      right: 0
+      top: 50px
+      background-color: white
+      box-shadow: $shadow
+      z-index: 100
+
+    .dropdown-item 
+      display: flex
+      align-items: center
+      padding-left: 15px
+      width: 100%
+      height: 50px
+      &:hover
+        color: $white-1
+        background: $blue-2
+
+    &:hover .dropdown-content
+      display: block
+
+// ! Popup
+
+.popup-screen 
+  @include popup-position
+  background: #ffffff9f
+  mask-size: 100px
+  background-position: center
+
+.popup-wrapper
+  @include popup-position
+  top: 60px
+  @include flex-center
+  
+.popup-window
+  margin-top: -30px
+  overflow: hidden
+  width: 320px
+  background-color: $blue-2
+  border-radius: $radius
+  box-shadow: $shadow
+  z-index: 100
+
+  .popup-form-container
+    @include flex-center
+    width: 100%
+    flex-direction: column
+    top: 50px
+
+  .popup-header
+    @include flex-center 
+    background: $blue-2
+    align-items: center
+    height: 60px
+    border-bottom: 1px solid #ffffff38
+
+// ! Input fields
+
+.input-field 
+  position: relative
+  margin-left: -5px
+  border: none
+  height: 54px
+  width: 270px
+
+  input
+    border: none
+    position: absolute
+    color: grey
+    padding: 20px 0 0 5px
+    font-size: 16px
+    width:100%
+    height: 33px
+    &:focus
+      outline-width: 0
+
+  .input-label
+    margin: 0
+    position: absolute
+    z-index: 100
+    top: 5px
+    left: 5px
+
+.input-field.first > input 
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+
+.input-field.last > input 
+  border-bottom-left-radius: $radius
+  border-bottom-right-radius: $radius
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus, 
+select:-webkit-autofill:active 
+  -webkit-text-fill-color: grey
+  box-shadow: 0 0 0px 1000px rgb(250, 250, 250) inset !important
+
+.submit-button 
+  border: none
+  border-radius: $radius
+  background: $blue-6
+  width: 275px
+  height: 40px
+  margin: 10px 0 25px 0
+  box-shadow: $shadow-light
+  &:hover
+    background: $blue-7 
+
+    
+
+
+
+
+
+// ! Grid
 
 .grid
   display: flex
@@ -107,12 +315,12 @@ body
     width: 100px
     height: 100px
     margin: 10px
-    background: $gradient !important
+    background: $gradient
     
     .tile-content
       position: absolute
       width: 70px
-      background-size: cover !important
+      background-size: cover
 
     .tile-label
       @include flex-center
@@ -124,30 +332,30 @@ body
       width: 100%
       height: 100%
       background: rgba(0, 0, 0, 70%)
-      z-index: 100
+      z-index: 50
       transition: opacity .2s, visibility .2s
     &:hover .tile-label
-        border: 1px solid $blue-6
+        border: 1px solid $white-1
         cursor: pointer
         visibility: visible
         opacity: 1
 
-.favourite
-  border: none !important
-  position: absolute
-  top: 5px
-  right: 5px
-  z-index: 200
-  height: 16px
-  width: 16px
-  background-color: white
-  mask-image: url('/assets/fave.svg')
-  mask-size: 16px
-  background-size: contain
-  background-size: 10px 10px 
+    .favourite
+      border: none
+      position: absolute
+      top: 5px
+      right: 5px
+      z-index: 200
+      height: 16px
+      width: 16px
+      background-color: white
+      mask-image: url('/assets/fave.svg')
+      mask-size: 16px
+      background-size: contain
+      background-size: 10px 10px 
         
    
-
-
+//  Fix public / user menu
+// Login and register - create user profile
 
     

@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Profile from './components/Profile'
 // import Home from './components/Home'
 import Tools from './components/Tools'
 // import Databases from './components/Databases'
@@ -15,6 +16,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Tools/>} />
+        <Route path='/profile/:username' element={<Profile/>} />
         {/* <Route exact path='/' component={Languages} />
         <Route exact path='/' component={Databases} />
         <Route exact path='/' component={Webframes} /> */}
