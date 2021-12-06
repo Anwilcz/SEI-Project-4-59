@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap')
+
+$blue-2: #00050A
+$blue-3: #001a35
+$blue-4: #002B54
+$blue-5: #003971
+$blue-6: #0062c4
+
+$yellow-1: #816300
+$yellow-2: #d8d1b9
+
+$white-1: #FFFFFF
+
+$red-1: #812A00
+$red-2: #AE3800
+
+$purple-1: #6F0031
+$purple-2: #950041
+
+
+$green-1: #0A6B00
+$green-2: #0E9000
+
+$shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px 0px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+$radius: 5px
+$gradient: linear-gradient(132deg, $blue-3 -20%, $blue-6 100%)
+$margin-1: 60px
+$margin-2: 30px
+
+// ! Font family
+
+$family: 'Readex Pro', sans-serif
+
+// ! Font weight
+
+.light
+  font-weight: 200
+
+.medium
+  font-weight: 400
+
+.bold
+  font-weight: 600
+
+// ! Font color
+
+.white
+  color: $white-1
+
+  //! Font size
+
+.large
+  font-size: 24px
+
+.big
+  font-size: 20px  
+
+.normal
+  font-size: 16px
+
+.small
+  font-size: 12px
+
+//! Indentation
+
+.indented
+  margin-left: $margin-2
+
+
+
+@mixin text-header-2
+  margin-top: $margin-1
+  padding-left: 20px
+  color: white
+
+@mixin text-label
+  color: white
+  text-align: center
+
+@mixin flex-center 
+  display: flex
+  justify-content: center
+  align-items: center
+
+*
+  font-family: $family
+
+body 
+  background: $blue-3
+  margin: 0px
+  min-height: 100vh
+
+.content-wrapper
+  width: 90%
+  margin: 0 auto
+  padding-bottom: $margin-1
+
+.grid
+  display: flex
+  flex-wrap: wrap
+
+  .tile
+    @include flex-center
+    border-radius: $radius
+    position: relative
+    box-shadow: $shadow
+    width: 100px
+    height: 100px
+    margin: 10px
+    background: $gradient !important
+    
+    .tile-content
+      position: absolute
+      width: 70px
+      background-size: cover !important
+
+    .tile-label
+      @include flex-center
+      @include text-label
+      border-radius: $radius
+      position: absolute
+      visibility: hidden
+      opacity: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 70%)
+      z-index: 100
+      transition: opacity .2s, visibility .2s
+    &:hover .tile-label
+        border: 1px solid $blue-6
+        cursor: pointer
+        visibility: visible
+        opacity: 1
+
+.favourite
+  border: none !important
+  position: absolute
+  top: 5px
+  right: 5px
+  z-index: 200
+  height: 16px
+  width: 16px
+  background-color: white
+  mask-image: url('/assets/fave.svg')
+  mask-size: 16px
+  background-size: contain
+  background-size: 10px 10px 
+        
+   
+
+
+
+    
