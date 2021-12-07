@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model, logout
 from django.conf import settings
 from django.http.response import HttpResponse
 import jwt
-from .serializers import UserSerializer
+from user.serializers import UserSerializer
 User = get_user_model()
 
 class RegisterView(APIView):

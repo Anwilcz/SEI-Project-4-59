@@ -35,7 +35,7 @@ const Login = ({ state, setState, setUsername }) => {
     try {
       const { data } = await axios.post('/api/auth/login/', formData)
       setItemToLocalStorage(data.token)
-      console.log('Data ->', data)
+      localStorage.setItem('username', formData.username)
       setUsername(formData.username)
       handleClick()
     } catch (err) {

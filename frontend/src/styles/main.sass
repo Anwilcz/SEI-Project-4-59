@@ -85,6 +85,10 @@ $family: 'Readex Pro', sans-serif
 .indented
   margin-left: $margin-2
 
+.indented-2
+  margin-left: $margin-3
+
+
 .centered
   margin: 0 auto
   text-align: center
@@ -104,6 +108,13 @@ $family: 'Readex Pro', sans-serif
   display: flex
   justify-content: center
   align-items: center
+
+@mixin flex-column 
+  display: flex
+  flex-direction: column
+  
+@mixin flex-row
+  display: flex
 
 @mixin popup-position
   position: absolute
@@ -238,6 +249,30 @@ body
 
 // ! Input fields
 
+label 
+  display: inline-block
+  border: none
+  border-radius: $radius
+  background: $blue-6
+  padding: 10px
+  box-shadow: $shadow-light
+  &:hover
+    background: $blue-7 
+
+#file-chosen
+  display: inline-block
+  height: 38px
+  width: 191px
+  overflow: hidden
+  margin-left: 5px
+  border: none
+  border-radius: $radius
+  background: $blue-4
+  line-height: 37px
+  box-shadow: $shadow-light
+
+
+
 .input-field 
   position: relative
   margin-left: -5px
@@ -295,7 +330,16 @@ select:-webkit-autofill:active
   &:hover
     background: $blue-7 
 
-    
+// ! User profile
+
+
+.profile-image
+  width: 200px
+  height: 200px
+  background-position: center
+  background-size: contain
+  border-radius: 50%
+
 
 
 
@@ -303,9 +347,57 @@ select:-webkit-autofill:active
 
 // ! Grid
 
+.column-fill
+  margin-left: 30px
+
+.column-300
+  @include flex-column
+  width: 300px
+  margin-right: 30px
+  
+  .name
+    margin: 25px 0
+
+  .submit-button
+    margin: 5px 0 !important
+
+  .profile-section
+    margin: 30px 0
+
+    
+
+ 
+  
+
+.row
+  @include flex-row
+  marign: 60px
+  
+
+
+
 .grid
   display: flex
   flex-wrap: wrap
+
+  .tile-small
+    width: 50px !important
+    height: 50px !important
+    margin: 5px !important
+
+    .tile-content
+      width: 35px !important
+
+    .tile-label
+      font-size: 10px !important
+
+    .favourite
+      top: 2px !important
+      right: 2px !important
+      height: 10px !important
+      width: 10px !important
+      mask-size: 10px !important
+      background-size: 10px 10px 
 
   .tile
     @include flex-center

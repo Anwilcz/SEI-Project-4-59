@@ -12,11 +12,35 @@ User = get_user_model()
 class ProfileSerializer(serializers.ModelSerializer):
   class Meta:
     model = Profile
-    fields = '__all__'
+    fields = ('user', 'slogan', 'location', 'image', 'favourited',)
   
-
 class UserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+    password_confirmation = serializers.CharField(write_only=True)
     profile = ProfileSerializer(read_only=True)
+
+    def validate(self, data):
+
+        password = data.pop('password')
+        password_confirmation = data.pop('password_confirmation')
+
+        if password != password_confirmation:
+            raise serializers.ValidationError({'password_confirmation': 'Passwords do not match'})
+
+        try:
+            validations.validate_password(password=password)
+        except ValidationError as err:
+            raise serializers.ValidationError({'password': err.messages})
+
+        data['password'] = make_password(password)
+        return data
+
     class Meta:
         model = User
-        fields = ('username', 'profile', 'id')
+        fields = ('id', 'username', 'email', 'password', 'password_confirmation', 'profile',)
+
+    def create(self, validated_data):
+      user = User.objects.create(**validated_data)
+      Profile.objects.create(user=user)
+      user.save()
+      return user

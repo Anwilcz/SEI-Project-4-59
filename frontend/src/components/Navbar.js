@@ -11,7 +11,8 @@ const Navbar = () => {
   const [visibleRegister, setVisibilityRegister] = useState(false)
   const [visibleSeeYou, setVisibilitySeeYou] = useState(false)
   const [visibleLogin, setVisibilityLogin] = useState(false)
-  const [username, setUsername] = useState(false)
+  const initialUsername = localStorage.getItem('username')
+  const [username, setUsername] = useState(initialUsername ? initialUsername : null)
   const [newUser, createNewUser] = useState(false)
   const [categories] = useState([])
 
@@ -67,6 +68,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
+    window.localStorage.removeItem('username')
     setVisibilitySeeYou(true)
   }
 
@@ -107,9 +109,9 @@ const Navbar = () => {
           <p className='bold large white'>Developer Insights</p>
         </div>
       </div>
-      <div className='categories'>
+      {/* <div className='categories'>
         ddd
-      </div>
+      </div> */}
       <div className='menu'>
         <i className='bars icon' />
         <div className='user-icon' />
