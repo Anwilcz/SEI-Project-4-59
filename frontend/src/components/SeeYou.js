@@ -4,6 +4,7 @@ const SeeYou = ({ username, setUsername, setVisibilitySeeYou }) => {
   const handleClick = () => {
     setUsername(false)
     setVisibilitySeeYou(false)
+    location.reload()
   }
 
   return (

@@ -261,17 +261,30 @@ label
 
 #file-chosen
   display: inline-block
-  height: 38px
+  vertical-align: middle
+  height: 39px
   width: 191px
   overflow: hidden
   margin-left: 5px
   border: none
   border-radius: $radius
   background: $blue-4
-  line-height: 37px
+  line-height: 40px
+  text-indent: 10px
   box-shadow: $shadow-light
 
-
+.input-field-dark
+  height: 38px
+  width: 275px
+  overflow: hidden
+  border: none
+  border-radius: $radius
+  background: $blue-4
+  line-height: 37px
+  box-shadow: $shadow-light
+  padding-left: 10px
+  margin: 10px 0 25px 0
+  box-shadow: $shadow-light
 
 .input-field 
   position: relative
@@ -391,13 +404,22 @@ select:-webkit-autofill:active
     .tile-label
       font-size: 10px !important
 
-    .favourite
+    .close
       top: 2px !important
       right: 2px !important
       height: 10px !important
       width: 10px !important
       mask-size: 10px !important
       background-size: 10px 10px 
+      border: none
+      position: absolute
+      z-index: 55
+      background-color: $white-1
+      mask-image: url('/assets/close.svg')
+      mask-size: 10px
+      background-size: contain
+      background-size: 10px 10px 
+
 
   .tile
     @include flex-center
@@ -432,22 +454,32 @@ select:-webkit-autofill:active
         visibility: visible
         opacity: 1
 
-    .favourite
+    &:hover .heart
+      background-color: white
+
+    .heart
       border: none
       position: absolute
       top: 5px
       right: 5px
-      z-index: 200
       height: 16px
       width: 16px
-      background-color: white
+      background-color: none
       mask-image: url('/assets/fave.svg')
       mask-size: 16px
       background-size: contain
       background-size: 10px 10px 
-        
+      z-index: 55 !important
+
+
+    .favourited 
+      z-index: 55 !important
+      background-color: $blue-7 !important
+      visibility: visible !important
+    
    
 //  Fix public / user menu
 // Login and register - create user profile
 
-    
+.hidden 
+  display: none    

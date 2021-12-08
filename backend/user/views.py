@@ -77,7 +77,7 @@ class UserProfileView(APIView):
       profile_data = request.data
       profile_data['user'] = request.user.id
       updated_profile = ProfileSerializer(profile, data=request.data)
-      print(updated_profile)
+      print('loddddddcvvv', updated_profile)
       if updated_profile.is_valid():
         updated_profile.save()
         return Response(updated_profile.data, status=status.HTTP_200_OK)
@@ -86,4 +86,28 @@ class UserProfileView(APIView):
     else:
         return Response({"message": "Authentication credentials were not provided."}, status.HTTP_401_UNAUTHORIZED)
 
+
+# # !!!!!!!!!!!!!!!!!!!!!!!!
+
+# from .forms import ProfileImageForm
+
+# def change_image(request):
+#     if request.method == 'POST':
+#         form = ProfileImageForm(request.POST, request.FILES)
+#         if form.is_valid():
+#           try:
+#             profile = Profile.objects.get(user=request.user)
+#             profile_image = request.FILES['image']
+#             profile_data = request.data
+#             profile_data['image']= profile_image
+#             profile_data['user'] = request.user.id
+#             updated_profile = ProfileSerializer(profile, data=profile_data)
+#             if updated_profile.is_valid():
+#               updated_profile.save()
+#               return Response(updated_profile.data, status=status.HTTP_200_OK)
+#             else:
+#               return Response(updated_profile.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)
+#           except:
+#             return Response({"message": "User profile not found"}, status.HTTP_404_NOT_FOUND)        
+        
 

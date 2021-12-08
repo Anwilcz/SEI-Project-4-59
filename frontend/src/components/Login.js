@@ -4,6 +4,7 @@ import axios from 'axios'
 const Login = ({ state, setState, setUsername }) => {
   const handleClick = () => {
     setState(!state)
+    location.reload()
   }
 
   const [formData, setFormData] = useState({
