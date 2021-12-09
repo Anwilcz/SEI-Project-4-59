@@ -59,7 +59,6 @@ const Navbar = () => {
 
   const userIsAuthenticated = () => {
     const payload = getPayLoad()
-    console.log(payload)
     if (!payload) return false
     // const now = Math.round(Date.now() / 1000)
     if (payload) return true //if (now < payload.exp) return true
@@ -106,7 +105,7 @@ const Navbar = () => {
       }}>
         <div className='logo'>
           <div className='chart-icon' />
-          <p className='bold large white'>Developer Insights</p>
+          <p className='bold logo-size white'>Developer Insights</p>
         </div>
       </div>
       {/* <div className='categories'>

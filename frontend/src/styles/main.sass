@@ -31,10 +31,13 @@ $gradient-2: linear-gradient(-48deg, $blue-6 -20%, $white-1 100%)
 $margin-1: 60px
 $margin-2: 30px
 $margin-3: 15px
+$margin-4: 90px
 
 .margin-0 
   margin: 0
- 
+
+.margin-top-0
+  margin-top: 0
 // ! Font family
 
 $family: 'Readex Pro', sans-serif
@@ -69,7 +72,7 @@ $family: 'Readex Pro', sans-serif
   //! Font size
 
 .large
-  font-size: 24px
+  font-size: 28px
 
 .big
   font-size: 20px  
@@ -80,6 +83,12 @@ $family: 'Readex Pro', sans-serif
 .small
   font-size: 12px
 
+.logo-size
+  font-size: 24px
+
+.header-size
+  font-size: 38px
+
 //! Indentation
 
 .indented
@@ -88,12 +97,26 @@ $family: 'Readex Pro', sans-serif
 .indented-2
   margin-left: $margin-3
 
+.indented-3
+  margin-left: $margin-4
+
+.quote
+  border-left: 3px solid $blue-6
+  padding-left: 15px
+  margin-left: 5px
 
 .centered
   margin: 0 auto
   text-align: center
 
+.margin-top
+  margin-top: 60px 
 
+.margin-bottom
+  margin-bottom: 60px 
+
+.margin-bottom-section
+  margin-bottom: 120px
 
 @mixin text-header-2
   margin-top: $margin-1
@@ -122,29 +145,125 @@ $family: 'Readex Pro', sans-serif
   left: 0
   width: 100vw
   height: 100vh
+
+@mixin backInLeft
+  animation-name: slideInLeft
+  animation-duration: 2s
+
+@mixin fadeInLeft
+  animation: fadeInLeft
+  animation-duration: 2s
+
+@keyframes fadeInDelayed
+  0% 
+    opacity: 0
+  70% 
+    opacity: 0
+  100% 
+    opacity: 1
+
+@keyframes forceDelay
+  0% 
+    opacity: 0
+  100% 
+    opacity: 0
+
+@mixin fadeInDelayed
+  animation: fadeInDelayed
+  animation-duration: 3s
   
-.chart 
-  display: flex
+.chart
+  font-size: 16px !important
   width: 100%
   align-items: center
   justify-content: center
-  cont
   
 // ! Page 
 
 *
   font-family: $family
+  text-decoration: none
 
 body 
   background: $blue-3
   margin: 0px
   min-height: 100vh
+  min-width: 680px
 
 .content-wrapper
   width: 90%
   margin: 0 auto
   padding: $margin-1 0
+  
 
+// ! Hero
+
+.hero 
+  @include flex-column
+  padding: 0 5vw
+  height: 500px
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 10%, #001a35 80%,), url('/assets/code-hero.jpeg')
+  background-size: cover
+  background-position: center
+   
+  .hero-button
+    display: inline-block
+    padding-top: 12px
+    text-align: center
+    vertical-align: middle
+    text-decoration: none
+    background: none
+    border: none
+    border-left: 0.5px solid $blue-4
+    border-right: 0.5px solid $blue-4
+    width: 175px
+    font-weight: 100
+    font-size: 16px
+    box-shadow: red
+    color: $white-1
+    height: 30px
+    margin-left: -1px
+    word-wrap: none
+    &:hover
+      color: $blue-7
+    // border-left: 1px solid white
+    // border-right: 1px solid white
+
+
+  .hero-text
+    margin-top: 180px
+    margin-bottom: 120px
+    font-weight: 600
+    color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #FFFFFFCE
+    font-size: 86px
+    @include backInLeft
+
+  .hero-logo
+    @include fadeInDelayed
+    animation-duration: 2.5s !important
+    height: 120px
+    width: 120px
+    margin-top: 170px
+    margin-right: 50px
+
+  .hero-categories
+    @include fadeInDelayed
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+
+    padding-left: 30px
+
+  .heart-big
+    height: 30px
+    width: 30px
+    margin-left: 15px
+    background: $blue-4
+    mask-image: url('/assets/fave.svg')
+    mask-size: 30px
+  
 
 // ! Navbar
 
@@ -155,6 +274,7 @@ body
   align-items: center
   padding: 0px 20px
   width: 100vw
+  min-width: 600px
   top: 0
   height: 60px
   background: $blue-2
@@ -369,6 +489,10 @@ select:-webkit-autofill:active
 .column-fill
   margin-left: 30px
 
+.column-half
+  width: 50%
+  margin-left: 30px
+
 .column-300
   @include flex-column
   width: 300px
@@ -410,6 +534,9 @@ select:-webkit-autofill:active
     .tile-label
       font-size: 10px !important
 
+    &:hover .close
+      background-color: white
+
     .close
       top: 2px !important
       right: 2px !important
@@ -420,7 +547,7 @@ select:-webkit-autofill:active
       border: none
       position: absolute
       z-index: 55
-      background-color: $white-1
+      background-color: none
       mask-image: url('/assets/close.svg')
       mask-size: 10px
       background-size: contain
@@ -478,27 +605,24 @@ select:-webkit-autofill:active
       z-index: 55 !important
 
 
-    .favourited 
-      z-index: 55 !important
-      background-color: $blue-7 !important
-      visibility: visible !important
+.favourited 
+  z-index: 55 !important
+  background-color: $blue-7 !important
+  visibility: visible !important
     
-   
-//  Fix public / user menu
-// Login and register - create user profile
 
 .hidden 
   display: none    
 
   // !! Plotly
 
-// .zerolinelayer
-//   display: none !important
+.js-plotly-plot .plotly .point
+  @include fadeInLeft
 
-// .gridlayer
-//   display: none !important
-// .point
-//   path 
-//     fill: blue !important
+g 
+  .point
+    fill: red !important
 
-  
+.annotation-text-g
+  @include fadeInDelayed
+

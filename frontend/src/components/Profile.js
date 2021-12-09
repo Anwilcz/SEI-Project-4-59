@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getPayLoad, getTokenFromLocalStorage } from './helpers/auth'
 import TileSmall from './TileSmall'
+import 'animate.css'
 // import { useNavigate } from 'react-router'
 
 

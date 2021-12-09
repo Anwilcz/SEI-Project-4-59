@@ -152,43 +152,66 @@ def dict(data, name, unique_key, category):
   }
 
 
-def convert(file):
-  start_time = time.time()
-  try:
-    # Reading data
-    print('Reading data..')
-    data, data_keys = read_data(file)
-    keys = Keys(data_keys)
+# def convert(file):
+#   start_time = time.time()
+#   try:
+#     # Reading data
+#     print('Reading data..')
+#     data, data_keys = read_data(file)
+#     keys = Keys(data_keys)
 
-    # Creating lists
-    print('Creating lists..')
-    languages = select_list(data, keys.languages)
-    databases = select_list(data, keys.databases)
-    platforms = select_list(data, keys.platforms)
-    webframes = select_list(data, keys.webframes)
+#     # Creating lists
+#     print('Creating lists..')
+#     languages = select_list(data, keys.languages)
+#     databases = select_list(data, keys.databases)
+#     platforms = select_list(data, keys.platforms)
+#     webframes = select_list(data, keys.webframes)
 
-    # Creating dicts
-    print('Creating dicts..')
-    languages_set = list(map(lambda item: dict(data, item, keys.languages, 'languages') ,languages))
-    # print('lang set ->', languages_set)
-    databases_set = list(map(lambda item: dict(data, item, keys.databases, 'databases') ,databases))
-    platforms_set = list(map(lambda item: dict(data, item, keys.platforms, 'platforms') ,platforms))
-    webframes_set = list(map(lambda item: dict(data, item, keys.webframes, 'webframes') ,webframes))
-    # print(languages_set[0].keys())
+#     # Creating dicts
+#     print('Creating dicts..')
+#     languages_set = list(map(lambda item: dict(data, item, keys.languages, 'languages') ,languages))
+#     # print('lang set ->', languages_set)
+#     databases_set = list(map(lambda item: dict(data, item, keys.databases, 'databases') ,databases))
+#     platforms_set = list(map(lambda item: dict(data, item, keys.platforms, 'platforms') ,platforms))
+#     webframes_set = list(map(lambda item: dict(data, item, keys.webframes, 'webframes') ,webframes))
+#     # print(languages_set[0].keys())
+  
+#     # Merging lists
+#     print('Merging lists..')
+#     data_set = languages_set + databases_set + platforms_set + webframes_set
 
-    # Merging lists
-    print('Merging lists..')
-    data_set = languages_set + databases_set + platforms_set + webframes_set
-
-    # Saving as json
-    print('Converting to json..')
-    with open('data.json', 'w') as data_file:
-        json.dump(data_set, data_file)
+#     # Saving as json
+#     print('Converting to json..')
+#     with open('data.json', 'w') as data_file:
+#         json.dump(data_set, data_file)
     
-    # Time record
-    print('Data converted successfully!')
-  except:
-    print('Something went wrong.')
-  print("--- time: %s seconds" % (time.time() - start_time))
+#     # Time record
+#     print('Data converted successfully!')
+#   except:
+#     print('Something went wrong.')
+#   print("--- time: %s seconds" % (time.time() - start_time))
 
-convert('survey_results_public.csv')
+# convert('survey_results_public.csv')
+
+def calculate_devs(data, name, key):
+  sum = 0
+  for line in data:
+    if name in line[key]:
+      sum += 1
+    else:
+      next
+  return sum
+
+
+def total_devs(file):
+  print('Reading data..')
+  data, data_keys = read_data(file)
+  prof_devs = calculate_devs(data, 'developer by profession', 'main_branch')
+  all_devs = calculate_devs(data, '', 'main_branch')
+  not_prof = all_devs - prof_devs
+  print('prof:', prof_devs)
+  print('all:', all_devs)
+  print('not_prof:', not_prof)
+
+
+total_devs('survey_results_public.csv')

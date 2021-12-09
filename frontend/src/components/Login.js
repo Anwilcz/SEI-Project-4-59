@@ -4,7 +4,6 @@ import axios from 'axios'
 const Login = ({ state, setState, setUsername }) => {
   const handleClick = () => {
     setState(!state)
-    location.reload()
   }
 
   const [formData, setFormData] = useState({
@@ -39,6 +38,7 @@ const Login = ({ state, setState, setUsername }) => {
       localStorage.setItem('username', formData.username)
       setUsername(formData.username)
       handleClick()
+      location.reload()
     } catch (err) {
       console.log('Error ->', err)
       setErrorData(err.response.data)
