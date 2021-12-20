@@ -7,6 +7,7 @@ name = "pypi"
 django-on-heroku = "*"
 djangorestframework = "*"
 django-import-export = "*"
+jwt = "*"
 
 [dev-packages]
 
