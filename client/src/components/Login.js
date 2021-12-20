@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { csrfToken } from './helpers/csrf'
 
 const Login = ({ state, setState, setUsername }) => {
   const handleClick = () => {
@@ -33,7 +34,11 @@ const Login = ({ state, setState, setUsername }) => {
     event.preventDefault()
     console.log('Form Data ->', formData)
     try {
-      const { data } = await axios.post('/api/auth/login/', formData)
+      const { data } = await axios.post('/api/auth/login/', formData, {
+        headers: {
+          'X-CSRFToken': csrfToken(),
+        },
+      })
       setItemToLocalStorage(data.token)
       localStorage.setItem('username', formData.username)
       setUsername(formData.username)
