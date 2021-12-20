@@ -8,6 +8,7 @@ django-on-heroku = "*"
 djangorestframework = "*"
 django-import-export = "*"
 jwt = "*"
+pillow = "*"
 
 [dev-packages]
 
