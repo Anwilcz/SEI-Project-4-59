@@ -6,6 +6,8 @@ from django.conf import settings
 from django.http.response import HttpResponse
 import jwt
 from user.serializers import UserSerializer
+from django.views.decorators.csrf import ensure_csrf_cookie
+
 User = get_user_model()
 
 class RegisterView(APIView):
@@ -27,6 +29,7 @@ class LoginView(APIView):
         except User.DoesNotExist:
             raise PermissionDenied({'message': 'Invalid credentials'})
 
+    @ensure_csrf_cookie
     def post(self, request):
 
         username = request.data.get('username')
