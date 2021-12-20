@@ -29,9 +29,9 @@
       "linux_prof_dev": 3307,
       "mac_os_prof_dev": 1340,
       "windows_prof_dev": 3707,
-      "linux_others": 3307,
-      "mac_os_others": 1340,
-      "windows_others": 3707
+      "linux_others": 2293,
+      "mac_os_others": 685,
+      "windows_others": 4336
     }
   },
   {
@@ -64,9 +64,9 @@
       "linux_prof_dev": 4999,
       "mac_os_prof_dev": 6039,
       "windows_prof_dev": 10333,
-      "linux_others": 4999,
-      "mac_os_others": 6039,
-      "windows_others": 10333
+      "linux_others": 2243,
+      "mac_os_others": 1132,
+      "windows_others": 5432
     }
   },
   {
@@ -99,9 +99,9 @@
       "linux_prof_dev": 6563,
       "mac_os_prof_dev": 8240,
       "windows_prof_dev": 12626,
-      "linux_others": 6563,
-      "mac_os_others": 8240,
-      "windows_others": 12626
+      "linux_others": 2672,
+      "mac_os_others": 1404,
+      "windows_others": 6565
     }
   },
   {
@@ -134,9 +134,9 @@
       "linux_prof_dev": 122,
       "mac_os_prof_dev": 534,
       "windows_prof_dev": 295,
-      "linux_others": 122,
-      "mac_os_others": 534,
-      "windows_others": 295
+      "linux_others": 97,
+      "mac_os_others": 103,
+      "windows_others": 243
     }
   },
   {
@@ -169,9 +169,9 @@
       "linux_prof_dev": 1898,
       "mac_os_prof_dev": 1502,
       "windows_prof_dev": 2741,
-      "linux_others": 1898,
-      "mac_os_others": 1502,
-      "windows_others": 2741
+      "linux_others": 680,
+      "mac_os_others": 313,
+      "windows_others": 1932
     }
   },
   {
@@ -204,9 +204,9 @@
       "linux_prof_dev": 535,
       "mac_os_prof_dev": 2892,
       "windows_prof_dev": 1139,
-      "linux_others": 535,
-      "mac_os_others": 2892,
-      "windows_others": 1139
+      "linux_others": 293,
+      "mac_os_others": 700,
+      "windows_others": 836
     }
   },
   {
@@ -239,9 +239,9 @@
       "linux_prof_dev": 7663,
       "mac_os_prof_dev": 5905,
       "windows_prof_dev": 9095,
-      "linux_others": 7663,
-      "mac_os_others": 5905,
-      "windows_others": 9095
+      "linux_others": 4031,
+      "mac_os_others": 1635,
+      "windows_others": 7607
     }
   },
   {
@@ -274,9 +274,9 @@
       "linux_prof_dev": 1017,
       "mac_os_prof_dev": 1156,
       "windows_prof_dev": 2098,
-      "linux_others": 1017,
-      "mac_os_others": 1156,
-      "windows_others": 2098
+      "linux_others": 531,
+      "mac_os_others": 334,
+      "windows_others": 1447
     }
   },
   {
@@ -309,9 +309,9 @@
       "linux_prof_dev": 737,
       "mac_os_prof_dev": 295,
       "windows_prof_dev": 681,
-      "linux_others": 737,
-      "mac_os_others": 295,
-      "windows_others": 681
+      "linux_others": 807,
+      "mac_os_others": 166,
+      "windows_others": 947
     }
   },
   {
@@ -344,9 +344,9 @@
       "linux_prof_dev": 2335,
       "mac_os_prof_dev": 868,
       "windows_prof_dev": 1890,
-      "linux_others": 2335,
-      "mac_os_others": 868,
-      "windows_others": 1890
+      "linux_others": 1943,
+      "mac_os_others": 468,
+      "windows_others": 2397
     }
   },
   {
@@ -379,9 +379,9 @@
       "linux_prof_dev": 601,
       "mac_os_prof_dev": 477,
       "windows_prof_dev": 1004,
-      "linux_others": 601,
-      "mac_os_others": 477,
-      "windows_others": 1004
+      "linux_others": 549,
+      "mac_os_others": 266,
+      "windows_others": 1202
     }
   },
   {
@@ -414,9 +414,9 @@
       "linux_prof_dev": 4947,
       "mac_os_prof_dev": 3692,
       "windows_prof_dev": 3481,
-      "linux_others": 4947,
-      "mac_os_others": 3692,
-      "windows_others": 3481
+      "linux_others": 2120,
+      "mac_os_others": 544,
+      "windows_others": 1706
     }
   },
   {
@@ -449,9 +449,9 @@
       "linux_prof_dev": 569,
       "mac_os_prof_dev": 330,
       "windows_prof_dev": 410,
-      "linux_others": 569,
-      "mac_os_others": 330,
-      "windows_others": 410
+      "linux_others": 490,
+      "mac_os_others": 190,
+      "windows_others": 533
     }
   },
   {
@@ -484,9 +484,9 @@
       "linux_prof_dev": 5154,
       "mac_os_prof_dev": 7179,
       "windows_prof_dev": 10065,
-      "linux_others": 5154,
-      "mac_os_others": 7179,
-      "windows_others": 10065
+      "linux_others": 1589,
+      "mac_os_others": 780,
+      "windows_others": 3093
     }
   },
   {
@@ -519,9 +519,9 @@
       "linux_prof_dev": 4230,
       "mac_os_prof_dev": 2841,
       "windows_prof_dev": 2950,
-      "linux_others": 4230,
-      "mac_os_others": 2841,
-      "windows_others": 2950
+      "linux_others": 2231,
+      "mac_os_others": 597,
+      "windows_others": 1661
     }
   },
   {
@@ -554,9 +554,9 @@
       "linux_prof_dev": 5037,
       "mac_os_prof_dev": 4858,
       "windows_prof_dev": 10296,
-      "linux_others": 5037,
-      "mac_os_others": 4858,
-      "windows_others": 10296
+      "linux_others": 1798,
+      "mac_os_others": 848,
+      "windows_others": 4413
     }
   },
   {
@@ -589,9 +589,9 @@
       "linux_prof_dev": 1502,
       "mac_os_prof_dev": 1450,
       "windows_prof_dev": 10344,
-      "linux_others": 1502,
-      "mac_os_others": 1450,
-      "windows_others": 10344
+      "linux_others": 908,
+      "mac_os_others": 390,
+      "windows_others": 3826
     }
   },
   {
@@ -624,9 +624,9 @@
       "linux_prof_dev": 3093,
       "mac_os_prof_dev": 3074,
       "windows_prof_dev": 5355,
-      "linux_others": 3093,
-      "mac_os_others": 3074,
-      "windows_others": 5355
+      "linux_others": 1462,
+      "mac_os_others": 605,
+      "windows_others": 3967
     }
   },
   {
@@ -659,9 +659,9 @@
       "linux_prof_dev": 4437,
       "mac_os_prof_dev": 5893,
       "windows_prof_dev": 7926,
-      "linux_others": 4437,
-      "mac_os_others": 5893,
-      "windows_others": 7926
+      "linux_others": 1770,
+      "mac_os_others": 899,
+      "windows_others": 4037
     }
   },
   {
@@ -694,9 +694,9 @@
       "linux_prof_dev": 406,
       "mac_os_prof_dev": 225,
       "windows_prof_dev": 2804,
-      "linux_others": 406,
-      "mac_os_others": 225,
-      "windows_others": 2804
+      "linux_others": 312,
+      "mac_os_others": 70,
+      "windows_others": 1229
     }
   },
   {
@@ -729,9 +729,9 @@
       "linux_prof_dev": 4196,
       "mac_os_prof_dev": 4523,
       "windows_prof_dev": 3829,
-      "linux_others": 4196,
-      "mac_os_others": 4523,
-      "windows_others": 3829
+      "linux_others": 1521,
+      "mac_os_others": 613,
+      "windows_others": 1724
     }
   },
   {
@@ -764,9 +764,9 @@
       "linux_prof_dev": 379,
       "mac_os_prof_dev": 123,
       "windows_prof_dev": 186,
-      "linux_others": 379,
-      "mac_os_others": 123,
-      "windows_others": 186
+      "linux_others": 224,
+      "mac_os_others": 49,
+      "windows_others": 194
     }
   },
   {
@@ -799,9 +799,9 @@
       "linux_prof_dev": 1117,
       "mac_os_prof_dev": 1942,
       "windows_prof_dev": 737,
-      "linux_others": 1117,
-      "mac_os_others": 1942,
-      "windows_others": 737
+      "linux_others": 415,
+      "mac_os_others": 240,
+      "windows_others": 610
     }
   },
   {
@@ -834,9 +834,9 @@
       "linux_prof_dev": 1074,
       "mac_os_prof_dev": 723,
       "windows_prof_dev": 585,
-      "linux_others": 1074,
-      "mac_os_others": 723,
-      "windows_others": 585
+      "linux_others": 618,
+      "mac_os_others": 140,
+      "windows_others": 431
     }
   },
   {
@@ -869,9 +869,9 @@
       "linux_prof_dev": 785,
       "mac_os_prof_dev": 914,
       "windows_prof_dev": 322,
-      "linux_others": 785,
-      "mac_os_others": 914,
-      "windows_others": 322
+      "linux_others": 205,
+      "mac_os_others": 93,
+      "windows_others": 144
     }
   },
   {
@@ -904,9 +904,9 @@
       "linux_prof_dev": 219,
       "mac_os_prof_dev": 85,
       "windows_prof_dev": 331,
-      "linux_others": 219,
-      "mac_os_others": 85,
-      "windows_others": 331
+      "linux_others": 255,
+      "mac_os_others": 103,
+      "windows_others": 609
     }
   },
   {
@@ -939,9 +939,9 @@
       "linux_prof_dev": 80,
       "mac_os_prof_dev": 62,
       "windows_prof_dev": 134,
-      "linux_others": 80,
-      "mac_os_others": 62,
-      "windows_others": 134
+      "linux_others": 93,
+      "mac_os_others": 27,
+      "windows_others": 144
     }
   },
   {
@@ -974,9 +974,9 @@
       "linux_prof_dev": 2054,
       "mac_os_prof_dev": 2916,
       "windows_prof_dev": 3025,
-      "linux_others": 2054,
-      "mac_os_others": 2916,
-      "windows_others": 3025
+      "linux_others": 806,
+      "mac_os_others": 328,
+      "windows_others": 1827
     }
   },
   {
@@ -1009,9 +1009,9 @@
       "linux_prof_dev": 322,
       "mac_os_prof_dev": 314,
       "windows_prof_dev": 1181,
-      "linux_others": 322,
-      "mac_os_others": 314,
-      "windows_others": 1181
+      "linux_others": 95,
+      "mac_os_others": 40,
+      "windows_others": 276
     }
   },
   {
@@ -1044,9 +1044,9 @@
       "linux_prof_dev": 887,
       "mac_os_prof_dev": 942,
       "windows_prof_dev": 761,
-      "linux_others": 887,
-      "mac_os_others": 942,
-      "windows_others": 761
+      "linux_others": 252,
+      "mac_os_others": 101,
+      "windows_others": 323
     }
   },
   {
@@ -1079,9 +1079,9 @@
       "linux_prof_dev": 63,
       "mac_os_prof_dev": 37,
       "windows_prof_dev": 661,
-      "linux_others": 63,
-      "mac_os_others": 37,
-      "windows_others": 661
+      "linux_others": 34,
+      "mac_os_others": 14,
+      "windows_others": 156
     }
   },
   {
@@ -1114,9 +1114,9 @@
       "linux_prof_dev": 1278,
       "mac_os_prof_dev": 1741,
       "windows_prof_dev": 2065,
-      "linux_others": 1278,
-      "mac_os_others": 1741,
-      "windows_others": 2065
+      "linux_others": 575,
+      "mac_os_others": 267,
+      "windows_others": 1304
     }
   },
   {
@@ -1149,9 +1149,9 @@
       "linux_prof_dev": 969,
       "mac_os_prof_dev": 1328,
       "windows_prof_dev": 512,
-      "linux_others": 969,
-      "mac_os_others": 1328,
-      "windows_others": 512
+      "linux_others": 282,
+      "mac_os_others": 121,
+      "windows_others": 282
     }
   },
   {
@@ -1184,9 +1184,9 @@
       "linux_prof_dev": 75,
       "mac_os_prof_dev": 35,
       "windows_prof_dev": 397,
-      "linux_others": 75,
-      "mac_os_others": 35,
-      "windows_others": 397
+      "linux_others": 77,
+      "mac_os_others": 36,
+      "windows_others": 434
     }
   },
   {
@@ -1219,9 +1219,9 @@
       "linux_prof_dev": 269,
       "mac_os_prof_dev": 289,
       "windows_prof_dev": 354,
-      "linux_others": 269,
-      "mac_os_others": 289,
-      "windows_others": 354
+      "linux_others": 91,
+      "mac_os_others": 44,
+      "windows_others": 135
     }
   },
   {
@@ -1254,9 +1254,9 @@
       "linux_prof_dev": 504,
       "mac_os_prof_dev": 272,
       "windows_prof_dev": 212,
-      "linux_others": 504,
-      "mac_os_others": 272,
-      "windows_others": 212
+      "linux_others": 298,
+      "mac_os_others": 73,
+      "windows_others": 169
     }
   },
   {
@@ -1289,9 +1289,9 @@
       "linux_prof_dev": 413,
       "mac_os_prof_dev": 449,
       "windows_prof_dev": 244,
-      "linux_others": 413,
-      "mac_os_others": 449,
-      "windows_others": 244
+      "linux_others": 130,
+      "mac_os_others": 45,
+      "windows_others": 121
     }
   },
   {
@@ -1324,9 +1324,9 @@
       "linux_prof_dev": 227,
       "mac_os_prof_dev": 238,
       "windows_prof_dev": 98,
-      "linux_others": 227,
-      "mac_os_others": 238,
-      "windows_others": 98
+      "linux_others": 95,
+      "mac_os_others": 42,
+      "windows_others": 100
     }
   },
   {
@@ -1359,9 +1359,9 @@
       "linux_prof_dev": 43,
       "mac_os_prof_dev": 15,
       "windows_prof_dev": 64,
-      "linux_others": 43,
-      "mac_os_others": 15,
-      "windows_others": 64
+      "linux_others": 60,
+      "mac_os_others": 17,
+      "windows_others": 98
     }
   },
   {
@@ -1394,9 +1394,9 @@
       "linux_prof_dev": 7488,
       "mac_os_prof_dev": 7560,
       "windows_prof_dev": 7533,
-      "linux_others": 7488,
-      "mac_os_others": 7560,
-      "windows_others": 7533
+      "linux_others": 1968,
+      "mac_os_others": 853,
+      "windows_others": 2627
     }
   },
   {
@@ -1429,9 +1429,9 @@
       "linux_prof_dev": 3445,
       "mac_os_prof_dev": 3029,
       "windows_prof_dev": 4880,
-      "linux_others": 3445,
-      "mac_os_others": 3029,
-      "windows_others": 4880
+      "linux_others": 1481,
+      "mac_os_others": 546,
+      "windows_others": 2387
     }
   },
   {
@@ -1464,9 +1464,9 @@
       "linux_prof_dev": 4279,
       "mac_os_prof_dev": 4338,
       "windows_prof_dev": 6145,
-      "linux_others": 4279,
-      "mac_os_others": 4338,
-      "windows_others": 6145
+      "linux_others": 3024,
+      "mac_os_others": 1362,
+      "windows_others": 6261
     }
   },
   {
@@ -1499,9 +1499,9 @@
       "linux_prof_dev": 3153,
       "mac_os_prof_dev": 3588,
       "windows_prof_dev": 3852,
-      "linux_others": 3153,
-      "mac_os_others": 3588,
-      "windows_others": 3852
+      "linux_others": 557,
+      "mac_os_others": 290,
+      "windows_others": 613
     }
   },
   {
@@ -1534,9 +1534,9 @@
       "linux_prof_dev": 4872,
       "mac_os_prof_dev": 5392,
       "windows_prof_dev": 5152,
-      "linux_others": 4872,
-      "mac_os_others": 5392,
-      "windows_others": 5152
+      "linux_others": 999,
+      "mac_os_others": 420,
+      "windows_others": 1114
     }
   },
   {
@@ -1569,9 +1569,9 @@
       "linux_prof_dev": 1131,
       "mac_os_prof_dev": 1131,
       "windows_prof_dev": 1383,
-      "linux_others": 1131,
-      "mac_os_others": 1131,
-      "windows_others": 1383
+      "linux_others": 271,
+      "mac_os_others": 105,
+      "windows_others": 365
     }
   },
   {
@@ -1604,9 +1604,9 @@
       "linux_prof_dev": 3938,
       "mac_os_prof_dev": 4072,
       "windows_prof_dev": 6633,
-      "linux_others": 3938,
-      "mac_os_others": 4072,
-      "windows_others": 6633
+      "linux_others": 1543,
+      "mac_os_others": 706,
+      "windows_others": 3944
     }
   },
   {
@@ -1639,9 +1639,9 @@
       "linux_prof_dev": 1667,
       "mac_os_prof_dev": 2762,
       "windows_prof_dev": 3461,
-      "linux_others": 1667,
-      "mac_os_others": 2762,
-      "windows_others": 3461
+      "linux_others": 740,
+      "mac_os_others": 443,
+      "windows_others": 2042
     }
   },
   {
@@ -1674,9 +1674,9 @@
       "linux_prof_dev": 99,
       "mac_os_prof_dev": 72,
       "windows_prof_dev": 264,
-      "linux_others": 99,
-      "mac_os_others": 72,
-      "windows_others": 264
+      "linux_others": 48,
+      "mac_os_others": 32,
+      "windows_others": 146
     }
   },
   {
@@ -1709,9 +1709,9 @@
       "linux_prof_dev": 2265,
       "mac_os_prof_dev": 1438,
       "windows_prof_dev": 2565,
-      "linux_others": 2265,
-      "mac_os_others": 1438,
-      "windows_others": 2565
+      "linux_others": 863,
+      "mac_os_others": 241,
+      "windows_others": 1050
     }
   },
   {
@@ -1744,9 +1744,9 @@
       "linux_prof_dev": 854,
       "mac_os_prof_dev": 829,
       "windows_prof_dev": 7843,
-      "linux_others": 854,
-      "mac_os_others": 829,
-      "windows_others": 7843
+      "linux_others": 258,
+      "mac_os_others": 159,
+      "windows_others": 1634
     }
   },
   {
@@ -1779,9 +1779,9 @@
       "linux_prof_dev": 665,
       "mac_os_prof_dev": 493,
       "windows_prof_dev": 2135,
-      "linux_others": 665,
-      "mac_os_others": 493,
-      "windows_others": 2135
+      "linux_others": 263,
+      "mac_os_others": 115,
+      "windows_others": 958
     }
   },
   {
@@ -1814,9 +1814,9 @@
       "linux_prof_dev": 4233,
       "mac_os_prof_dev": 4188,
       "windows_prof_dev": 7051,
-      "linux_others": 4233,
-      "mac_os_others": 4188,
-      "windows_others": 7051
+      "linux_others": 1527,
+      "mac_os_others": 677,
+      "windows_others": 3160
     }
   },
   {
@@ -1849,9 +1849,9 @@
       "linux_prof_dev": 1328,
       "mac_os_prof_dev": 2250,
       "windows_prof_dev": 1808,
-      "linux_others": 1328,
-      "mac_os_others": 2250,
-      "windows_others": 1808
+      "linux_others": 220,
+      "mac_os_others": 182,
+      "windows_others": 456
     }
   },
   {
@@ -1884,9 +1884,9 @@
       "linux_prof_dev": 414,
       "mac_os_prof_dev": 435,
       "windows_prof_dev": 528,
-      "linux_others": 414,
-      "mac_os_others": 435,
-      "windows_others": 528
+      "linux_others": 110,
+      "mac_os_others": 62,
+      "windows_others": 143
     }
   },
   {
@@ -1919,9 +1919,9 @@
       "linux_prof_dev": 1655,
       "mac_os_prof_dev": 2275,
       "windows_prof_dev": 1993,
-      "linux_others": 1655,
-      "mac_os_others": 2275,
-      "windows_others": 1993
+      "linux_others": 747,
+      "mac_os_others": 352,
+      "windows_others": 1466
     }
   },
   {
@@ -1954,9 +1954,9 @@
       "linux_prof_dev": 7853,
       "mac_os_prof_dev": 6160,
       "windows_prof_dev": 12631,
-      "linux_others": 7853,
-      "mac_os_others": 6160,
-      "windows_others": 12631
+      "linux_others": 4551,
+      "mac_os_others": 1739,
+      "windows_others": 9449
     }
   },
   {
@@ -1989,9 +1989,9 @@
       "linux_prof_dev": 2245,
       "mac_os_prof_dev": 2542,
       "windows_prof_dev": 7654,
-      "linux_others": 2245,
-      "mac_os_others": 2542,
-      "windows_others": 7654
+      "linux_others": 753,
+      "mac_os_others": 404,
+      "windows_others": 2015
     }
   },
   {
@@ -2024,9 +2024,9 @@
       "linux_prof_dev": 6098,
       "mac_os_prof_dev": 8344,
       "windows_prof_dev": 7716,
-      "linux_others": 6098,
-      "mac_os_others": 8344,
-      "windows_others": 7716
+      "linux_others": 1537,
+      "mac_os_others": 939,
+      "windows_others": 2528
     }
   },
   {
@@ -2059,9 +2059,9 @@
       "linux_prof_dev": 2360,
       "mac_os_prof_dev": 2449,
       "windows_prof_dev": 2114,
-      "linux_others": 2360,
-      "mac_os_others": 2449,
-      "windows_others": 2114
+      "linux_others": 783,
+      "mac_os_others": 330,
+      "windows_others": 966
     }
   },
   {
@@ -2094,9 +2094,9 @@
       "linux_prof_dev": 3627,
       "mac_os_prof_dev": 4615,
       "windows_prof_dev": 4482,
-      "linux_others": 3627,
-      "mac_os_others": 4615,
-      "windows_others": 4482
+      "linux_others": 1163,
+      "mac_os_others": 676,
+      "windows_others": 2194
     }
   },
   {
@@ -2129,9 +2129,9 @@
       "linux_prof_dev": 262,
       "mac_os_prof_dev": 202,
       "windows_prof_dev": 414,
-      "linux_others": 262,
-      "mac_os_others": 202,
-      "windows_others": 414
+      "linux_others": 151,
+      "mac_os_others": 61,
+      "windows_others": 341
     }
   },
   {
@@ -2164,9 +2164,9 @@
       "linux_prof_dev": 376,
       "mac_os_prof_dev": 314,
       "windows_prof_dev": 492,
-      "linux_others": 376,
-      "mac_os_others": 314,
-      "windows_others": 492
+      "linux_others": 190,
+      "mac_os_others": 104,
+      "windows_others": 341
     }
   },
   {
@@ -2199,9 +2199,9 @@
       "linux_prof_dev": 1185,
       "mac_os_prof_dev": 1057,
       "windows_prof_dev": 1691,
-      "linux_others": 1185,
-      "mac_os_others": 1057,
-      "windows_others": 1691
+      "linux_others": 246,
+      "mac_os_others": 119,
+      "windows_others": 621
     }
   },
   {
@@ -2234,9 +2234,9 @@
       "linux_prof_dev": 620,
       "mac_os_prof_dev": 400,
       "windows_prof_dev": 538,
-      "linux_others": 620,
-      "mac_os_others": 400,
-      "windows_others": 538
+      "linux_others": 99,
+      "mac_os_others": 28,
+      "windows_others": 166
     }
   },
   {
@@ -2269,9 +2269,9 @@
       "linux_prof_dev": 5922,
       "mac_os_prof_dev": 5336,
       "windows_prof_dev": 7339,
-      "linux_others": 5922,
-      "mac_os_others": 5336,
-      "windows_others": 7339
+      "linux_others": 3772,
+      "mac_os_others": 1593,
+      "windows_others": 7650
     }
   },
   {
@@ -2304,9 +2304,9 @@
       "linux_prof_dev": 1943,
       "mac_os_prof_dev": 2095,
       "windows_prof_dev": 5823,
-      "linux_others": 1943,
-      "mac_os_others": 2095,
-      "windows_others": 5823
+      "linux_others": 469,
+      "mac_os_others": 218,
+      "windows_others": 1262
     }
   },
   {
@@ -2339,9 +2339,9 @@
       "linux_prof_dev": 2034,
       "mac_os_prof_dev": 1396,
       "windows_prof_dev": 1750,
-      "linux_others": 2034,
-      "mac_os_others": 1396,
-      "windows_others": 1750
+      "linux_others": 937,
+      "mac_os_others": 339,
+      "windows_others": 1426
     }
   },
   {
@@ -2374,9 +2374,9 @@
       "linux_prof_dev": 3511,
       "mac_os_prof_dev": 3785,
       "windows_prof_dev": 5627,
-      "linux_others": 3511,
-      "mac_os_others": 3785,
-      "windows_others": 5627
+      "linux_others": 1011,
+      "mac_os_others": 512,
+      "windows_others": 1947
     }
   },
   {
@@ -2409,9 +2409,9 @@
       "linux_prof_dev": 1415,
       "mac_os_prof_dev": 1035,
       "windows_prof_dev": 3713,
-      "linux_others": 1415,
-      "mac_os_others": 1035,
-      "windows_others": 3713
+      "linux_others": 576,
+      "mac_os_others": 290,
+      "windows_others": 1615
     }
   },
   {
@@ -2444,9 +2444,9 @@
       "linux_prof_dev": 2424,
       "mac_os_prof_dev": 3167,
       "windows_prof_dev": 3641,
-      "linux_others": 2424,
-      "mac_os_others": 3167,
-      "windows_others": 3641
+      "linux_others": 944,
+      "mac_os_others": 425,
+      "windows_others": 1792
     }
   },
   {
@@ -2479,9 +2479,9 @@
       "linux_prof_dev": 5049,
       "mac_os_prof_dev": 7033,
       "windows_prof_dev": 8603,
-      "linux_others": 5049,
-      "mac_os_others": 7033,
-      "windows_others": 8603
+      "linux_others": 1639,
+      "mac_os_others": 887,
+      "windows_others": 3373
     }
   },
   {
@@ -2514,9 +2514,9 @@
       "linux_prof_dev": 596,
       "mac_os_prof_dev": 530,
       "windows_prof_dev": 1757,
-      "linux_others": 596,
-      "mac_os_others": 530,
-      "windows_others": 1757
+      "linux_others": 331,
+      "mac_os_others": 153,
+      "windows_others": 992
     }
   },
   {
@@ -2549,9 +2549,9 @@
       "linux_prof_dev": 1011,
       "mac_os_prof_dev": 1807,
       "windows_prof_dev": 716,
-      "linux_others": 1011,
-      "mac_os_others": 1807,
-      "windows_others": 716
+      "linux_others": 289,
+      "mac_os_others": 177,
+      "windows_others": 382
     }
   },
   {
@@ -2584,9 +2584,9 @@
       "linux_prof_dev": 2339,
       "mac_os_prof_dev": 1603,
       "windows_prof_dev": 2297,
-      "linux_others": 2339,
-      "mac_os_others": 1603,
-      "windows_others": 2297
+      "linux_others": 967,
+      "mac_os_others": 363,
+      "windows_others": 1866
     }
   },
   {
@@ -2619,9 +2619,9 @@
       "linux_prof_dev": 1341,
       "mac_os_prof_dev": 966,
       "windows_prof_dev": 929,
-      "linux_others": 1341,
-      "mac_os_others": 966,
-      "windows_others": 929
+      "linux_others": 359,
+      "mac_os_others": 141,
+      "windows_others": 460
     }
   },
   {
@@ -2654,9 +2654,9 @@
       "linux_prof_dev": 173,
       "mac_os_prof_dev": 172,
       "windows_prof_dev": 2509,
-      "linux_others": 173,
-      "mac_os_others": 172,
-      "windows_others": 2509
+      "linux_others": 223,
+      "mac_os_others": 95,
+      "windows_others": 801
     }
   },
   {
@@ -2689,9 +2689,9 @@
       "linux_prof_dev": 1679,
       "mac_os_prof_dev": 1733,
       "windows_prof_dev": 2858,
-      "linux_others": 1679,
-      "mac_os_others": 1733,
-      "windows_others": 2858
+      "linux_others": 318,
+      "mac_os_others": 145,
+      "windows_others": 647
     }
   },
   {
@@ -2724,9 +2724,9 @@
       "linux_prof_dev": 1210,
       "mac_os_prof_dev": 1652,
       "windows_prof_dev": 1441,
-      "linux_others": 1210,
-      "mac_os_others": 1652,
-      "windows_others": 1441
+      "linux_others": 401,
+      "mac_os_others": 209,
+      "windows_others": 552
     }
   },
   {
@@ -2759,9 +2759,9 @@
       "linux_prof_dev": 267,
       "mac_os_prof_dev": 246,
       "windows_prof_dev": 3048,
-      "linux_others": 267,
-      "mac_os_others": 246,
-      "windows_others": 3048
+      "linux_others": 152,
+      "mac_os_others": 62,
+      "windows_others": 773
     }
   },
   {
@@ -2794,9 +2794,9 @@
       "linux_prof_dev": 572,
       "mac_os_prof_dev": 928,
       "windows_prof_dev": 762,
-      "linux_others": 572,
-      "mac_os_others": 928,
-      "windows_others": 762
+      "linux_others": 192,
+      "mac_os_others": 123,
+      "windows_others": 368
     }
   },
   {
@@ -2829,9 +2829,9 @@
       "linux_prof_dev": 146,
       "mac_os_prof_dev": 140,
       "windows_prof_dev": 198,
-      "linux_others": 146,
-      "mac_os_others": 140,
-      "windows_others": 198
+      "linux_others": 44,
+      "mac_os_others": 26,
+      "windows_others": 105
     }
   },
   {
