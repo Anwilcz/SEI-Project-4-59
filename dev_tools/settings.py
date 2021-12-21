@@ -139,7 +139,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join('/Users/anna/Development/Projects/SEI-Project-4-59/client/public', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'client', 'build', 'static', 'media')
 
 MEDIA_URL = '/media/'
 
