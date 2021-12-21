@@ -140,7 +140,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/static/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'client', 'build', 'media')
 
 MEDIA_URL = '/media/'
 
