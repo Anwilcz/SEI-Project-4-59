@@ -50,8 +50,8 @@ const NewPieChart = ({ tool, divId }) => {
     }
   ]
   const layout = {
-    width: 450,
-    height: 450,
+    width: window.innerWidth * 0.8 / 2,
+    height: window.innerWidth * 0.8 / 2,
     showlegend: false,
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',

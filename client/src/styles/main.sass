@@ -92,7 +92,7 @@ $family: 'Readex Pro', sans-serif
 //! Indentation
 
 .indented
-  margin-left: $margin-2
+  margin: $margin-2
 
 .indented-2
   margin-left: $margin-3
@@ -177,23 +177,30 @@ $family: 'Readex Pro', sans-serif
   width: 100%
   align-items: center
   justify-content: center
-  
+
+
 // ! Page 
 
 *
   font-family: $family
   text-decoration: none
 
-body 
+
+html 
+  height: -webkit-fill-available
+
+body
   background: $blue-3
   margin: 0px
   min-height: 100vh
+  min-height: -webkit-fill-available
   min-width: 680px
+
 
 .content-wrapper
   width: 90%
   margin: 0 auto
-  padding: $margin-1 0
+  padding: $margin-1 5%
   
 
 // ! Hero
@@ -273,8 +280,8 @@ body
   justify-content: space-between
   align-items: center
   padding: 0px 20px
-  width: 100vw
-  min-width: 600px
+  width: 100%
+  min-width: 680px
   top: 0
   height: 60px
   background: $blue-2

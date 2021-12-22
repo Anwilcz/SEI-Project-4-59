@@ -74,7 +74,7 @@ const NewChartCountry = ({ tool, height, divId }) => {
   const layout = {
     autosize: false,
     responsive: false,
-    width: 1100,
+    width: window.innerWidth * 0.9,
     height: height,
     xaxis1: {
       xref: 'paper',
