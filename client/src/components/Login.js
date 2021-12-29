@@ -75,7 +75,7 @@ const Login = ({ state, setState, setUsername }) => {
           <div className='input-field last'>
             <p className='input-label normal small dark-blue'>Password</p>
             <input
-              type='text'
+              type='password'
               name='password'
               placeholder='Password'
               value={formData.password}

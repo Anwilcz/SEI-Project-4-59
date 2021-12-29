@@ -33,6 +33,8 @@ $margin-2: 30px
 $margin-3: 15px
 $margin-4: 90px
 
+$mobile-breakpoint: 680px
+
 .margin-0 
   margin: 0
 
@@ -88,6 +90,17 @@ $family: 'Readex Pro', sans-serif
 
 .header-size
   font-size: 38px
+
+@media (max-width: $mobile-breakpoint)
+  .large
+    font-size: 20px 
+
+  .big
+    font-size: 16px  
+
+  .small
+    font-size: 10px
+  
 
 //! Indentation
 
@@ -192,22 +205,31 @@ html
 body
   background: $blue-3
   margin: 0px
+  width: 100vw
   min-height: 100vh
   min-height: -webkit-fill-available
-  min-width: 680px
-
+  overflow-x: hidden
 
 .content-wrapper
-  width: 90%
-  margin: 0 auto
-  padding: $margin-1 5%
-  
+  max-width: 90vw
+  margin: $margin-1 5vw
+
+.icon
+  height: 30px
+  width: 30px
+  background-color: white
+  mask-size: 30px
+  margin-right: 15px
+
+@media (max-width: $mobile-breakpoint)
+  .icon
+    margin-left: 15px
 
 // ! Hero
 
 .hero 
   @include flex-column
-  padding: 0 5vw
+  width: 100vw
   height: 500px
   background: linear-gradient(rgba(0, 0, 0, 0.2) 10%, #001a35 80%,), url('/assets/code-hero.jpeg')
   background-size: cover
@@ -247,6 +269,7 @@ body
     font-size: 86px
     @include backInLeft
 
+
   .hero-logo
     @include fadeInDelayed
     animation-duration: 2.5s !important
@@ -279,9 +302,7 @@ body
   display: flex
   justify-content: space-between
   align-items: center
-  padding: 0px 20px
-  width: 100%
-  min-width: 680px
+  width: 100vw
   top: 0
   height: 60px
   background: $blue-2
@@ -294,12 +315,7 @@ body
     align-items: center
 
     .chart-icon
-      height: 30px
-      width: 30px
-      background: $white-1
       mask-image: url('/assets/chart.svg')
-      mask-size: 30px
-      margin-right: 15px
 
   .menu
     position: relative
@@ -311,12 +327,8 @@ body
     margin-right: 50px
 
     .user-icon
-      height: 30px
-      width: 30px
-      background-color: white
       mask-image: url('/assets/user.svg')
-      mask-size: 30px
-      margin-right: 15px
+
 
     .dropdown-content 
       overflow: hidden
@@ -344,6 +356,39 @@ body
 
     &:hover .dropdown-content
       display: block
+
+@media (max-width: $mobile-breakpoint)
+  .dropdown-content
+    left: 15px
+
+  .popup-screen
+    top: 60px !important
+  
+  .js-plotly-plot
+    width: 100px !important
+
+  .navbar-wrapper
+    height: 120px !important
+    flex-direction: column
+    align-items: start
+
+  .hero-text
+    font-size: 35px !important
+    margin-top: 40px !important
+    margin-bottom: 40px !important
+    text-align: center
+
+  .hero-logo
+    margin: 120px auto 0 auto !important
+    // margin-top: 120px !important
+
+  .hero-categories
+    flex-direction: column
+    padding: 0px !important
+
+  .indented-3
+    margin-left: 5% !important
+
 
 // ! Popup
 
@@ -500,6 +545,14 @@ select:-webkit-autofill:active
   width: 50%
   margin-left: 30px
 
+@media (max-width: $mobile-breakpoint)
+  .row
+    display: flex
+    flex-direction: column
+  .column-half
+    width: auto
+    margin-left: 5% !important
+
 .column-300
   @include flex-column
   width: 300px
@@ -620,6 +673,8 @@ select:-webkit-autofill:active
 
 .hidden 
   display: none    
+
+@media (max-width: $mobile-breakpoint)
 
   // !! Plotly
 

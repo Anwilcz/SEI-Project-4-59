@@ -23,7 +23,7 @@ const NewChart = ({ x, y, type, height, divId }) => {
   const layout = {
     autosize: false,
     responsive: false,
-    width: window.innerWidth * 0.9,
+    width: 0.9 * window.innerWidth,
     height: height,
     xaxis1: {
       xref: 'paper',
@@ -34,8 +34,9 @@ const NewChart = ({ x, y, type, height, divId }) => {
       showgrid: false,
     },
     margin: {
-      l: 120,
+      // l: 145,
       t: 100,
+      r: 125,
     },
     yaxis: {
       xref: 'paper',
@@ -45,9 +46,10 @@ const NewChart = ({ x, y, type, height, divId }) => {
       ticklen: 10,
       tickfont: {
         family: 'Readex Pro, sans-serif',
-        size: 16,
+        size: 14,
         color: 'white',
       },
+      automargin: true,
     },
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',
@@ -64,10 +66,11 @@ const NewChart = ({ x, y, type, height, divId }) => {
       text: `${x[i]} votes (${(x[i] / devs * 100).toFixed(1)}%)`,
       font: {
         family: 'Readex Pro, sans-serif',
-        size: 14,
+        size: 12,
         color: '#3b9dff',
         xshift: '20px',
       },
+      
       xanchor: 'left',
       xshift: 10,
       textposition: 'top',
@@ -77,6 +80,9 @@ const NewChart = ({ x, y, type, height, divId }) => {
     }
     layout.annotations.push(result)
   }
+
+
+  console.log('current window inner width -> ', window.innerWidth)
   let colors = new Array
   if (divId === 'chart-1') {
     colors = ['002b54', '00315b', '003762', '003c69', '00426f', '004975', '004f7b', '005580', '005b85', '006189', '00688d', '006e90', '007493', '007b95', '008197', '008798', '008d98', '009499', '009a98', '00a097', '00a696', '00ac94', '00b292', '00b890', '00be8d', '26c38a', '40c987', '54ce84', '66d380', '77d97d', '88dd7a', '98e277', 'a8e774', 'b8eb72', 'c8ef70', 'd9f36e', 'e9f76e', 'fafa6e']

@@ -97,6 +97,7 @@ const NewChartCompanySize = ({ tool, height, divId }) => {
         size: 16,
         color: 'white',
       },
+      automargin: true,
     },
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',

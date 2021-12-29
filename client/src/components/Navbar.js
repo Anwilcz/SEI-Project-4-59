@@ -40,6 +40,7 @@ const Navbar = () => {
 
 
   const togglePop = (action) => {
+
     if (action === 'Sign up') {
       setVisibilityRegister(!visibleRegister)
       setVisibilityLogin(false)
@@ -104,7 +105,7 @@ const Navbar = () => {
         categories.splice(0, categories.length)
       }}>
         <div className='logo'>
-          <div className='chart-icon' />
+          <div className='icon chart-icon' />
           <p className='bold logo-size white'>Developer Insights</p>
         </div>
       </div>
@@ -112,8 +113,7 @@ const Navbar = () => {
         ddd
       </div> */}
       <div className='menu'>
-        <i className='bars icon' />
-        <div className='user-icon' />
+        <div className='icon user-icon' />
         {username ? <p className='user-message white normal'>Welcome back <span className='bold light-blue'>{username}</span>!</p> : <p className='white normal'>Log in</p>}
         <div className='dropdown-content'>
           {userIsAuthenticated() ? userMenu : publicMenu}

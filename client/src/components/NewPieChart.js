@@ -19,7 +19,7 @@ const NewPieChart = ({ tool, divId }) => {
       values: values,
       labels: labels,
       type: 'pie',
-      hole: 0.75,
+      hole: 0.4,
       textinfo: 'label+percent',
       textposition: 'outside',
       automargin: true,
@@ -50,8 +50,8 @@ const NewPieChart = ({ tool, divId }) => {
     }
   ]
   const layout = {
-    width: window.innerWidth * 0.8 / 2,
-    height: window.innerWidth * 0.8 / 2,
+    width: 300,
+    height: 300,
     showlegend: false,
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',

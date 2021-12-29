@@ -76,7 +76,7 @@ const Register = ({ state, setState, createNewUser }) => {
           <div className='input-field'>
             <p className='input-label normal small dark-blue'>Password</p>
             <input
-              type='text'
+              type='password'
               name='password'
               placeholder='Password'
               value={formData.password}
@@ -87,7 +87,7 @@ const Register = ({ state, setState, createNewUser }) => {
           <div className='input-field last'>
             <p className='input-label normal small dark-blue'>Password confirmation</p>
             <input
-              type='text'
+              type='password'
               name='password_confirmation'
               placeholder='Password confirmation'
               value={formData.password_confirmation}
