@@ -163,7 +163,7 @@ const Profile = () => {
 
     return (
       <div className='row'>
-        <div className='column-300 content-wrapper'>
+        <div className='column-300'>
           <div className='profile-image centered' style={{ backgroundImage: `url('/static${user['profile']['image']}')` }} />
           <h2 className='name bold large white centered'>{user.username}</h2>
           {isOwner ?
