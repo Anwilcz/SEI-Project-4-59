@@ -44,7 +44,7 @@ const Profile = () => {
         setUser(data)
       } catch (err) {
         console.log(err)
-        setUser(null)
+        setUser('not found')
       }
     }
     getUser()
@@ -160,7 +160,7 @@ const Profile = () => {
   )
 
   const notFound = (
-    <h2 className='light light-grey normal indented margin-top'>Profile not found</h2>
+    <h2 className='light light-grey normal indented margin-top-double'>Profile not found</h2>
   )
 
   const userProfile = () => {
@@ -223,21 +223,21 @@ const Profile = () => {
         <div className='column-fill content-wrapper'>
           <p className='bold medium white indented-2'>Favourite languages <span className='normal medium white'>({favouritedLanguages.length})</span></p>
           <div className='grid'>
-            {user ? null : loadingData}
+            {tools ? null : loadingData}
             {(favouritedLanguages).map(tool => {
               return <TileSmall setRerender={setRerender} key={tool.name} tool={tool} />
             })}
           </div>
           <p className='bold medium white indented-2'>Favourite databases <span className='normal medium white'>({favouritedDatabases.length})</span></p>
           <div className='grid'>
-            {user ? null : loadingData}
+            {tools ? null : loadingData}
             {(favouritedDatabases).map(tool => {
               return <TileSmall setRerender={setRerender} key={tool.name} tool={tool} />
             })}
           </div>
           <p className='bold medium white indented-2'>Favourite webframes <span className='normal medium white'>({favouritedWebframes.length})</span></p>
           <div className='grid'>
-            {user ? null : loadingData}
+            {tools ? null : loadingData}
             {(favouritedWebframes).map(tool => {
               return <TileSmall setRerender={setRerender} key={tool.name} tool={tool} />
             })}
@@ -250,7 +250,10 @@ const Profile = () => {
 
   return (
     <div className='content-wrapper'>
-      {user ? userProfile() : notFound }
+      {user ? 
+        user === 'not found' ? notFound : userProfile()
+        : 
+        loadingData }
     </div >
   )
 
