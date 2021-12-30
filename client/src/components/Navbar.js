@@ -89,7 +89,7 @@ const Navbar = () => {
         redirect(`/profile/user?name=${username}`)
       }} className='dropdown-item'>User profile</div>
       <div className='dropdown-item' onClick={() => {
-        redirect('/experiences/experience/new')
+        redirect('/profiles')
       }} >
         All profiles
       </div>
