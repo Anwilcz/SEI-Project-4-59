@@ -156,7 +156,7 @@ const Profile = () => {
   )
 
   const loadingData = (
-    <h2 className='light light-grey normal indented margin-top'>Profile data loading, please wait..</h2>
+    <h2 className='light light-grey normal indented margin-top margin-top-double'>Profile data loading, please wait..</h2>
   )
 
   const notFound = (
@@ -223,21 +223,21 @@ const Profile = () => {
         <div className='column-fill content-wrapper'>
           <p className='bold medium white indented-2'>Favourite languages <span className='normal medium white'>({favouritedLanguages.length})</span></p>
           <div className='grid'>
-            {tools ? null : loadingData}
+    
             {(favouritedLanguages).map(tool => {
               return <TileSmall setRerender={setRerender} key={tool.name} tool={tool} />
             })}
           </div>
           <p className='bold medium white indented-2'>Favourite databases <span className='normal medium white'>({favouritedDatabases.length})</span></p>
           <div className='grid'>
-            {tools ? null : loadingData}
+     
             {(favouritedDatabases).map(tool => {
               return <TileSmall setRerender={setRerender} key={tool.name} tool={tool} />
             })}
           </div>
           <p className='bold medium white indented-2'>Favourite webframes <span className='normal medium white'>({favouritedWebframes.length})</span></p>
           <div className='grid'>
-            {tools ? null : loadingData}
+
             {(favouritedWebframes).map(tool => {
               return <TileSmall setRerender={setRerender} key={tool.name} tool={tool} />
             })}
