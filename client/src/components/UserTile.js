@@ -13,7 +13,7 @@ const UserTile = ({ user }) => {
 
   return (
     <div className='row margin-bottom-small' onClick={() => {
-      redirect(`profile/user?name=${user.username}`)
+      redirect(`/profile/user?name=${user.username}`)
     }}>
       <div className='profile-image small-image' style={{ backgroundImage: `url('/static${user['profile']['image']}')` }} />
       <p className='medium white big indented-2'>{user.username}</p>

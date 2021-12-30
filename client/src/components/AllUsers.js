@@ -27,7 +27,7 @@ const AllUsers = () => {
 
   const userProfiles = () => {
     return (
-      <div className='margin-top-double'>
+      <div className='margin-top-double margin-bottom'>
         <div className='content-wrapper'>
           <h2 className='bold white big'>All profiles <span className='light big'>({users.length})</span></h2>
           {(users).map(user => {
