@@ -75,6 +75,10 @@ const Tool = () => {
     return <h2 className='quote medium white big'><span className='light-blue'>{sorted[0][1]}</span> out of {total}, <span className='light-blue'>{((sorted[0][1] / total) * 100).toFixed(1)}%</span> surveyed {cat} developers chose <span className='light-blue'>{sorted[0][0]}</span>.</h2>
   }
 
+  const loadingData = (
+    <h2 className='light light-grey normal indented margin-top'>{name} data loading, please wait..</h2>
+  )
+
   return (
     <div>
       <div className='hero' >
@@ -96,7 +100,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>What do we know about the global community of {name} developers?</h2>
 
         <h2 id='worked-with' className='bold white header-size indented margin-top-0'>Those who have worked with <span className='light-blue'>{name}</span> before are...</h2>
-        {tool ? <h2 className='bold white header-size margin-bottom-section indented margin-top-0'><span className='light-blue'>{tool.worked_with}</span> out of {devsData.all}, <span className='light-blue'>{((tool.worked_with / devsData.all) * 100).toFixed(1)}%</span> surveyed developers.</h2> : null}
+        {tool ? <h2 className='bold white header-size margin-bottom-section indented margin-top-0'><span className='light-blue'>{tool.worked_with}</span> out of {devsData.all}, <span className='light-blue'>{((tool.worked_with / devsData.all) * 100).toFixed(1)}%</span> surveyed developers.</h2> : loadingData}
         <div className='row margin-bottom-section'>
           <div className='column-half'>
             {tool ?
@@ -124,7 +128,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>What is the current employment status of experienced <span className='light-blue'>{name}</span> software developers?</h2>
         <div id='employment-worked-with' className='row margin-bottom-section'>
 
-          {tool ? <NewChartEmployment tool={tool} height={480} divId={'employment-worked-with'} /> : null}
+          {tool ? <NewChartEmployment tool={tool} height={480} divId={'employment-worked-with'} /> : loadingData}
 
         </div>
 
@@ -133,7 +137,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>What size is the business where experienced <span className='light-blue'>{name}</span> software developers work?</h2>
         <div id='company-worked-with' className='row margin-bottom-section'>
 
-          {tool ? <NewChartCompanySize tool={tool} height={600} divId={'company-worked-with'} /> : null}
+          {tool ? <NewChartCompanySize tool={tool} height={600} divId={'company-worked-with'} /> : loadingData}
 
 
 
@@ -144,7 +148,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>Where <span className='light-blue'>{name}</span> is the most popular among experienced software developers?</h2>
         <div id='country-worked-with' className='row margin-bottom-section'>
 
-          {tool ? <NewChartCountry tool={tool} height={600} divId={'country-worked-with'} /> : null}
+          {tool ? <NewChartCountry tool={tool} height={600} divId={'country-worked-with'} /> : loadingData}
 
         </div>
 
@@ -166,7 +170,7 @@ const Tool = () => {
                 <h2 className='bold white large'>Professional developers</h2>
                 <h2 className='quote medium white big'><span className='light-blue'>{tool.wants_to_work_with_prof_devs}</span> out of {devsData.pro}, <span className='light-blue'>{((tool.wants_to_work_with_prof_devs / devsData.pro) * 100).toFixed(1)}%</span> surveyed professional developers want to work with {name}.</h2>
               </div>
-              : null}
+              : loadingData}
 
 
 
@@ -177,7 +181,7 @@ const Tool = () => {
                 <h2 className='bold white large'>Other developers</h2>
                 <h2 className='quote medium white big'><span className='light-blue'>{tool.wants_to_work_with_others}</span> out of {devsData.other}, <span className='light-blue'>{((tool.wants_to_work_with_others / devsData.other) * 100).toFixed(1)}%</span> surveyed students/ non-professional developers want to work with {name}.</h2>
               </div>
-              : null}
+              : loadingData}
           </div>
         </div>
 
@@ -186,7 +190,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>What is the current employment status of future <span className='light-blue'>{name}</span> software developers?</h2>
         <div id='employment-want-to-work-with' className='row margin-bottom-section'>
 
-          {tool ? <NewChartEmployment tool={tool} height={480} divId={'employment-want-to-work-with'} /> : null}
+          {tool ? <NewChartEmployment tool={tool} height={480} divId={'employment-want-to-work-with'} /> : loadingData}
 
         </div>
 
@@ -195,7 +199,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>What size is the business where future <span className='light-blue'>{name}</span> software developers work?</h2>
         <div id='company-want-to-work-with' className='row margin-bottom-section'>
 
-          {tool ? <NewChartCompanySize tool={tool} height={600} divId={'company-want-to-work-with'} /> : null}
+          {tool ? <NewChartCompanySize tool={tool} height={600} divId={'company-want-to-work-with'} /> : loadingData}
 
 
 
@@ -206,7 +210,7 @@ const Tool = () => {
         <h2 className='medium white big margin-bottom indented'>Where <span className='light-blue'>{name}</span> is the most popular among future {name} software developers?</h2>
         <div id='country-want-to-work-with' className='row margin-bottom-section'>
 
-          {tool ? <NewChartCountry tool={tool} height={600} divId={'country-want-to-work-with'} /> : null}
+          {tool ? <NewChartCountry tool={tool} height={600} divId={'country-want-to-work-with'} /> : loadingData}
 
         </div>
 
@@ -227,7 +231,7 @@ const Tool = () => {
               {tool ? findOS(tool, 'professional') : null}
               <div id='os-profesional'>
 
-                {tool ? <NewPieChart tool={tool} divId={'os-profesional'} /> : null}
+                {tool ? <NewPieChart tool={tool} divId={'os-profesional'} /> : loadingData}
 
               </div>
             </div>
@@ -240,7 +244,7 @@ const Tool = () => {
               {tool ? findOS(tool, 'other') : null}
 
               <div id='os-other'>
-                {tool ? <NewPieChart tool={tool} divId={'os-other'} /> : null}
+                {tool ? <NewPieChart tool={tool} divId={'os-other'} /> : loadingData}
               </div>
             </div>
 
