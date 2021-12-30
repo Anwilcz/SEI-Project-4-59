@@ -58,7 +58,7 @@ const Tools = () => {
   return (
     <div>
       <div className='hero' >
-        <h1 className='hero-text indented'>2021 Insights</h1>
+        <h1 className='hero-text-home indented'>2021 Insights</h1>
         <div className='hero-categories'>
           <a href='#languages' className='hero-button big white'>Languages </a>
           <a href='#databases' className='hero-button big white'>Databases </a>

@@ -100,18 +100,21 @@ $family: 'Readex Pro', sans-serif
 
   .small
     font-size: 10px
+
+  .header-size
+    font-size: 24px
   
 
 //! Indentation
 
 .indented
-  margin: $margin-2
+  margin: 0px $margin-2
 
 .indented-2
-  margin-left: $margin-3
+  margin: 0px $margin-3
 
 .indented-3
-  margin-left: $margin-4
+  margin: 0px $margin-4
 
 .quote
   border-left: 3px solid $blue-6
@@ -244,7 +247,6 @@ body
     width: 175px
     font-weight: 100
     font-size: 16px
-    box-shadow: red
     color: $white-1
     height: 30px
     margin-left: -1px
@@ -254,6 +256,12 @@ body
     // border-left: 1px solid white
     // border-right: 1px solid white
 
+  .hero-logo
+    @include fadeInDelayed
+    animation-duration: 2.5s !important
+    height: 120px
+    width: 120px
+    margin: 170px 60px 0px 60px
 
   .hero-text
     margin-top: 180px
@@ -265,22 +273,40 @@ body
     font-size: 86px
     @include backInLeft
 
+  .hero-text-home
+    margin-top: 180px
+    margin-bottom: 120px
+    font-weight: 600
+    color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #FFFFFFCE
+    font-size: 86px
+    @include backInLeft
 
-  .hero-logo
-    @include fadeInDelayed
-    animation-duration: 2.5s !important
-    height: 120px
-    width: 120px
-    margin-top: 170px
-    margin-right: 50px
+@media (max-width: $mobile-breakpoint)
+  .hero
+    height: 500px !important
+
+  .hero-button
+    width: 300px !important
+    border: none !important
+    background-color: $blue-2 !important
+    border-radius: 25px
+    margin-bottom: 15px
+
+  .hero-text
+    font-size: 86px
+    margin-top: 30px !important
+    margin-bottom: -10px !important
 
   .hero-categories
     @include fadeInDelayed
     display: flex
+    flex-direction: column
     align-items: center
-    flex-wrap: nowrap
 
-    padding-left: 30px
+    flex-wrap: nowrap
+    padding: 15px !important
 
   .heart-big
     height: 30px
@@ -368,19 +394,20 @@ body
     flex-direction: column
     align-items: start
 
+  .hero-text-home
+    font-size: 35px !important
+    text-align: center
+    margin-bottom: 40px !important
+
   .hero-text
     font-size: 35px !important
-    margin-top: 40px !important
-    margin-bottom: 40px !important
+    margin-top: 175px
+    margin-bottom: 40px
     text-align: center
 
   .hero-logo
     margin: 120px auto 0 auto !important
     // margin-top: 120px !important
-
-  .hero-categories
-    flex-direction: column
-    padding: 0px !important
 
   .indented-3
     margin-left: 5% !important
@@ -673,7 +700,7 @@ select:-webkit-autofill:active
 .hidden 
   display: none    
 
-@media (max-width: $mobile-breakpoint)
+
 
   // !! Plotly
 
