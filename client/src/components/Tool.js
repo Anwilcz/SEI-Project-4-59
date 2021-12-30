@@ -82,12 +82,13 @@ const Tool = () => {
           {tool ? <img className='hero-logo' src={convertUrl(tool)} /> : null}
           <h1 className='hero-text'>{name}</h1>
         </div>
-        <div className='hero-categories'>
-          <a href='#worked-with' className='hero-button big white'> Worked with {name}</a>
-          <a href='#want-to-work-with' className='hero-button big white'>Want to work with {name}</a>
+        <div className='hero-categories indented'>
           {user ? <div className={user.profile.favourited.includes(id) ? 'heart-big favourited' : 'heart-big'} id={id} onClick={(event) => {
             addFavourites(event)
-          }} /> : null}
+          }} /> : <div className='heart-big'/>}
+          <a href='#worked-with' className='hero-button big white'> Worked with {name}</a>
+          <a href='#want-to-work-with' className='hero-button big white'>Want to work with {name}</a>
+  
         </div>
       </div>
       <div className='content-wrapper'>

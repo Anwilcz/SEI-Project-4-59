@@ -116,7 +116,7 @@ $family: 'Readex Pro', sans-serif
   margin: $margin-2
 
 .indented-2
-  margin: 0px $margin-3
+  margin: $margin-3
 
 .indented-3
   margin: 0px $margin-4
@@ -132,6 +132,9 @@ $family: 'Readex Pro', sans-serif
 
 .margin-top
   margin-top: 60px 
+
+.margin-top-double
+  margin-top: 120px 
 
 .margin-bottom
   margin-bottom: 60px 
@@ -234,18 +237,15 @@ body
 .hero 
   @include flex-column
   width: 100vw
-  height: 500px
+  min-height: 500px
   background: linear-gradient(rgba(0, 0, 0, 0.2) 10%, #001a35 80%,), url('/assets/code-hero.jpeg')
   background-size: cover
   background-position: center
 
-  .hero-button:first-of-type
-    margin-left: 5vw
-
   .hero-button
     display: inline-flex
     padding: 0 15px
-    margin-right: 15px
+    margin-left: 15px
     border-radius: 20px
     align-items: center
     text-decoration: none
@@ -259,6 +259,10 @@ body
       background: $blue-7
     // border-left: 1px solid white
     // border-right: 1px solid white
+
+  @media (min-width: $mobile-breakpoint)
+    .hero-button:first-of-type
+      margin-left: 5vw !important
 
   .hero-logo
     @include fadeInDelayed
@@ -290,13 +294,24 @@ body
 
   .hero-categories
     @include fadeInDelayed
+    display: flex
+    align-items: center
+
+  .heart-big
+    display: inline-block
+    height: 35px
+    width: 35px
+    margin-left: 5vw
+    background: $blue-5
+    mask-image: url('/assets/fave.svg')
+    mask-size: 35px
 
 @media (max-width: $mobile-breakpoint)
   .hero
     min-height: 435px !important
 
   .hero-logo
-    margin: 150px auto 0 auto !important
+    margin: 175px auto 0 auto !important
 
   .hero-button
     justify-content: center
@@ -313,20 +328,15 @@ body
     font-size: 35px !important
     text-align: center
 
+  .heart-big
+    margin: 0px 0px 35px 0px !important
+
   .hero-categories
     animation: none !important
     display: flex
     flex-direction: column
     align-items: center
     flex-wrap: nowrap
-
-  .heart-big
-    height: 30px
-    width: 30px
-    margin-left: 15px
-    background: $blue-4
-    mask-image: url('/assets/fave.svg')
-    mask-size: 30px
   
 
 // ! Navbar
