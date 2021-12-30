@@ -22,6 +22,8 @@ $purple-2: #950041
 $green-1: #0A6B00
 $green-2: #0E9000
 
+$grey-7: #bebebe
+
 $shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px 0px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
 $shadow-light: $white-1 0px 1px 5px -5px
 $radius: 5px
@@ -47,7 +49,7 @@ $family: 'Readex Pro', sans-serif
 // ! Font weight
 
 .light
-  font-weight: 200
+  font-weight: 100
 
 .medium
   font-weight: 400
@@ -65,6 +67,9 @@ $family: 'Readex Pro', sans-serif
 
 .light-blue
   color: $blue-7
+
+.light-grey
+  color: $grey-7
 
 .gradient-text
   background: $gradient-2
@@ -108,7 +113,7 @@ $family: 'Readex Pro', sans-serif
 //! Indentation
 
 .indented
-  margin: 0px $margin-2
+  margin: $margin-2
 
 .indented-2
   margin: 0px $margin-3
@@ -215,7 +220,7 @@ body
 
 .content-wrapper
   max-width: 90vw
-  margin: $margin-1 5vw
+  margin: 0px 5vw
 
 .icon
   height: 30px
@@ -233,26 +238,25 @@ body
   background: linear-gradient(rgba(0, 0, 0, 0.2) 10%, #001a35 80%,), url('/assets/code-hero.jpeg')
   background-size: cover
   background-position: center
-   
+
+  .hero-button:first-of-type
+    margin-left: 5vw
+
   .hero-button
-    display: inline-block
-    padding-top: 12px
-    text-align: center
-    vertical-align: middle
+    display: inline-flex
+    padding: 0 15px
+    margin-right: 15px
+    border-radius: 20px
+    align-items: center
     text-decoration: none
-    background: none
-    border: none
-    border-left: 0.5px solid $blue-4
-    border-right: 0.5px solid $blue-4
-    width: 175px
+    background: $blue-6
     font-weight: 100
     font-size: 16px
     color: $white-1
-    height: 30px
-    margin-left: -1px
-    word-wrap: none
+    height: 40px
+    white-space: nowrap
     &:hover
-      color: $blue-7
+      background: $blue-7
     // border-left: 1px solid white
     // border-right: 1px solid white
 
@@ -274,6 +278,7 @@ body
     @include backInLeft
 
   .hero-text-home
+    margin-left: 5vw
     margin-top: 180px
     margin-bottom: 120px
     font-weight: 600
@@ -283,30 +288,37 @@ body
     font-size: 86px
     @include backInLeft
 
+  .hero-categories
+    @include fadeInDelayed
+
 @media (max-width: $mobile-breakpoint)
   .hero
-    height: 500px !important
+    min-height: 435px !important
+
+  .hero-logo
+    margin: 150px auto 0 auto !important
 
   .hero-button
+    justify-content: center
     width: 300px !important
-    border: none !important
-    background-color: $blue-2 !important
-    border-radius: 25px
-    margin-bottom: 15px
+    margin: 0 0 15px 0 !important
+    animation: none !important
 
   .hero-text
     font-size: 86px
-    margin-top: 30px !important
-    margin-bottom: -10px !important
+    margin: 35px 0px !important
+
+  .hero-text-home
+    margin: 180px 0px 60px 0px !important
+    font-size: 35px !important
+    text-align: center
 
   .hero-categories
-    @include fadeInDelayed
+    animation: none !important
     display: flex
     flex-direction: column
     align-items: center
-
     flex-wrap: nowrap
-    padding: 15px !important
 
   .heart-big
     height: 30px
@@ -394,23 +406,14 @@ body
     flex-direction: column
     align-items: start
 
-  .hero-text-home
-    font-size: 35px !important
-    text-align: center
-    margin-bottom: 40px !important
-
   .hero-text
     font-size: 35px !important
     margin-top: 175px
     margin-bottom: 40px
     text-align: center
 
-  .hero-logo
-    margin: 120px auto 0 auto !important
-    // margin-top: 120px !important
-
   .indented-3
-    margin-left: 5% !important
+    margin-left: 5vw !important
 
 
 // ! Popup

@@ -78,23 +78,21 @@ const Tool = () => {
   return (
     <div>
       <div className='hero' >
-        <div className='row indented'>
+        <div className='row'>
           {tool ? <img className='hero-logo' src={convertUrl(tool)} /> : null}
           <h1 className='hero-text'>{name}</h1>
         </div>
         <div className='hero-categories'>
-          <a href='#worked-with' className='hero-button big white'> Worked with </a>
-          <a href='#want-to-work-with' className='hero-button big white'>Want to work with </a>
+          <a href='#worked-with' className='hero-button big white'> Worked with {name}</a>
+          <a href='#want-to-work-with' className='hero-button big white'>Want to work with {name}</a>
           {user ? <div className={user.profile.favourited.includes(id) ? 'heart-big favourited' : 'heart-big'} id={id} onClick={(event) => {
             addFavourites(event)
           }} /> : null}
         </div>
       </div>
-      <div className='indented-3'>
-        <h2 className='bold white header-size'>Developers pofile</h2>
-        <h2 className='medium white big margin-bottom'>What do we know about the global community of {name} developers?</h2>
-      </div>
       <div className='content-wrapper'>
+        <h2 className='bold white header-size indented'><span className='light-blue'>{name}</span> developers pofile</h2>
+        <h2 className='medium white big margin-bottom indented'>What do we know about the global community of {name} developers?</h2>
 
         <h2 id='worked-with' className='bold white header-size indented margin-top-0'>Those who have worked with <span className='light-blue'>{name}</span> before are...</h2>
         {tool ? <h2 className='bold white header-size margin-bottom-section indented margin-top-0'><span className='light-blue'>{tool.worked_with}</span> out of {devsData.all}, <span className='light-blue'>{((tool.worked_with / devsData.all) * 100).toFixed(1)}%</span> surveyed developers.</h2> : null}

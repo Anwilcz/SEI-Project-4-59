@@ -58,9 +58,9 @@ const Tools = () => {
   return (
     <div>
       <div className='hero' >
-        <h1 className='hero-text-home indented'>2021 Insights</h1>
+        <h1 className='hero-text-home'>2021 Insights</h1>
         <div className='hero-categories'>
-          <a href='#languages' className='hero-button big white'>Languages </a>
+          <a href='#languages' className='hero-button big white'><p>Languages </p></a>
           <a href='#databases' className='hero-button big white'>Databases </a>
           <a href='#webframes' className='hero-button big white'>Webframes </a>
         </div>
@@ -81,7 +81,7 @@ const Tools = () => {
             </div>
           </div>
           :
-          <h2 className='medium white small indented margin-top'>Languages data loading, please wait..</h2>
+          <h2 className='light light-grey normal indented margin-top'>Languages data loading, please wait..</h2>
         }
 
         <h2 className='bold white header-size indented margin-top' id='databases'>Databases</h2>
@@ -99,7 +99,7 @@ const Tools = () => {
             </div>
           </div>
           :
-          <h2 className='medium white small indented'>Databases data loading, please wait..</h2>
+          <h2 className='light light-grey normal indented'>Databases data loading, please wait..</h2>
         }
 
         <h2 className='bold white header-size indented margin-top' id='webframes'>Webframes</h2>
@@ -117,7 +117,7 @@ const Tools = () => {
             </div>
           </div>
           :
-          <h2 className='medium white small indented'>Webframes data loading, please wait..</h2>
+          <h2 className='light light-grey normal indented'>Webframes data loading, please wait..</h2>
         }
 
 
