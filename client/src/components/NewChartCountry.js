@@ -85,9 +85,9 @@ const NewChartCountry = ({ tool, height, divId }) => {
       showgrid: false,
     },
     margin: {
-      l: 200,
-      t: 60,
-      b: 0,
+      t: 0,
+      r: 125,
+      l: 165,
     },
     yaxis: {
       xref: 'paper',
@@ -97,9 +97,10 @@ const NewChartCountry = ({ tool, height, divId }) => {
       ticklen: 10,
       tickfont: {
         family: 'Readex Pro, sans-serif',
-        size: 16,
+        size: 14,
         color: 'white',
       },
+      automargin: true,
     },
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',
@@ -116,7 +117,7 @@ const NewChartCountry = ({ tool, height, divId }) => {
       text: `${x[i]} votes (${(x[i] / total * 100).toFixed(1)}%)`,
       font: {
         family: 'Readex Pro, sans-serif',
-        size: 14,
+        size: 12,
         color: '#3b9dff',
         xshift: '20px',
       },

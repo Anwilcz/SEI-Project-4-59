@@ -3,7 +3,6 @@ import axios from 'axios'
 
 const Register = ({ state, setState, createNewUser }) => {
   const handleClick = () => {
-    createNewUser(formData.username)
     setState(!state)
   }
 
@@ -32,6 +31,7 @@ const Register = ({ state, setState, createNewUser }) => {
     console.log('Form Data ->', formData)
     try {
       await axios.post('/api/auth/register/', formData)
+      createNewUser(formData.username)
       handleClick()
     } catch (err) {
       console.log('Error ->', err)

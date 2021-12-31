@@ -34,8 +34,8 @@ const NewChart = ({ x, y, type, height, divId }) => {
       showgrid: false,
     },
     margin: {
-      // l: 145,
-      t: 100,
+      t: 30,
+      b: 30,
       r: 125,
     },
     yaxis: {

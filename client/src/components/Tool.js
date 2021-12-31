@@ -126,7 +126,7 @@ const Tool = () => {
 
         <h2 id='employment' className='bold white header-size indented'>Employment type</h2>
         <h2 className='medium white big margin-bottom indented'>What is the current employment status of experienced <span className='light-blue'>{name}</span> software developers?</h2>
-        <div id='employment-worked-with' className='row margin-bottom-section'>
+        <div id='employment-worked-with'>
 
           {tool ? <NewChartEmployment tool={tool} height={480} divId={'employment-worked-with'} /> : loadingData}
 
@@ -135,7 +135,7 @@ const Tool = () => {
 
         <h2 id='company' className='bold white header-size indented'>Company size</h2>
         <h2 className='medium white big margin-bottom indented'>What size is the business where experienced <span className='light-blue'>{name}</span> software developers work?</h2>
-        <div id='company-worked-with' className='row margin-bottom-section'>
+        <div id='company-worked-with'>
 
           {tool ? <NewChartCompanySize tool={tool} height={600} divId={'company-worked-with'} /> : loadingData}
 
@@ -146,7 +146,7 @@ const Tool = () => {
 
         <h2 id='country' className='bold white header-size indented'>Country</h2>
         <h2 className='medium white big margin-bottom indented'>Where <span className='light-blue'>{name}</span> is the most popular among experienced software developers?</h2>
-        <div id='country-worked-with' className='row margin-bottom-section'>
+        <div id='country-worked-with'>
 
           {tool ? <NewChartCountry tool={tool} height={600} divId={'country-worked-with'} /> : loadingData}
 
@@ -188,7 +188,7 @@ const Tool = () => {
 
         <h2 id='employment' className='bold white header-size indented'>Employment type</h2>
         <h2 className='medium white big margin-bottom indented'>What is the current employment status of future <span className='light-blue'>{name}</span> software developers?</h2>
-        <div id='employment-want-to-work-with' className='row margin-bottom-section'>
+        <div id='employment-want-to-work-with'>
 
           {tool ? <NewChartEmployment tool={tool} height={480} divId={'employment-want-to-work-with'} /> : loadingData}
 
@@ -197,7 +197,7 @@ const Tool = () => {
 
         <h2 id='company' className='bold white header-size indented'>Company size</h2>
         <h2 className='medium white big margin-bottom indented'>What size is the business where future <span className='light-blue'>{name}</span> software developers work?</h2>
-        <div id='company-want-to-work-with' className='row margin-bottom-section'>
+        <div id='company-want-to-work-with'>
 
           {tool ? <NewChartCompanySize tool={tool} height={600} divId={'company-want-to-work-with'} /> : loadingData}
 
@@ -208,7 +208,7 @@ const Tool = () => {
 
         <h2 id='country' className='bold white header-size indented'>Country</h2>
         <h2 className='medium white big margin-bottom indented'>Where <span className='light-blue'>{name}</span> is the most popular among future {name} software developers?</h2>
-        <div id='country-want-to-work-with' className='row margin-bottom-section'>
+        <div id='country-want-to-work-with'>
 
           {tool ? <NewChartCountry tool={tool} height={600} divId={'country-want-to-work-with'} /> : loadingData}
 
