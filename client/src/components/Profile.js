@@ -13,10 +13,7 @@ const Profile = () => {
   const [imageUpload, setImageUpload] = useState(false)
   const [editProfile, setEditProfile] = useState(false)
   const [file, setFile] = useState(null)
-  const [formData, setFormData] = useState({
-    slogan: '',
-    location: '',
-  })
+  const [formData, setFormData] = useState({})
   const [isOwner, setIsOwner] = useState(false)
 
   const { search } = window.location
@@ -42,7 +39,6 @@ const Profile = () => {
         const username = new URLSearchParams(search).get('name')
         const { data } = await axios.get(`/api/profile/${username}/`)
         setUser(data)
-        setFormData(data.profile)
       } catch (err) {
         console.log(err)
         setUser('not found')
@@ -124,7 +120,7 @@ const Profile = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      await axios.put(`/api/profile/${user.username}/`, formData,
+      await axios.put(`/api/profile/${user.username}/`, { slogan: user.profile.slogan, location: user.profile.location , ...formData },
         {
           headers: {
             'Authorization': `Bearer ${getTokenFromLocalStorage()}`,
