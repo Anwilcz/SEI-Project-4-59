@@ -133,6 +133,10 @@ $family: 'Readex Pro', sans-serif
 .margin-top
   margin-top: 60px 
 
+@media (max-width: $mobile-breakpoint)
+  .margin-top-double
+    margin-top: 180px !important
+
 .margin-top-double
   margin-top: 120px 
 
@@ -226,7 +230,7 @@ body
 
 .content-wrapper
   max-width: 90vw
-  margin: 0px 5vw
+  margin: 0px 5vw 60px 5vw
 
 .icon
   height: 30px
@@ -246,6 +250,7 @@ body
   background-position: center
 
   .hero-button
+    cursor: pointer
     display: inline-flex
     padding: 0 15px
     margin-left: 15px
@@ -357,6 +362,7 @@ body
   z-index: 100
   
   .logo
+    cursor: pointer
     height: 60px
     display: flex
     align-items: center
@@ -365,6 +371,7 @@ body
       mask-image: url('/assets/chart.svg')
 
   .menu
+    cursor: pointer
     position: relative
     min-width: 100px
     height: 60px
@@ -392,6 +399,7 @@ body
       z-index: 100
 
     .dropdown-item 
+      cursor: pointer
       display: flex
       align-items: center
       padding-left: 15px
@@ -549,7 +557,8 @@ select:-webkit-autofill:active
   -webkit-text-fill-color: grey
   box-shadow: 0 0 0px 1000px rgb(250, 250, 250) inset !important
 
-.submit-button 
+.submit-button
+  cursor: pointer 
   border: none
   border-radius: $radius
   background: $blue-6
@@ -571,6 +580,7 @@ select:-webkit-autofill:active
   border-radius: 50%
 
 .small-image
+  margin: 3px !important
   width: 50px !important
   height: 50px !important
 
@@ -600,7 +610,6 @@ select:-webkit-autofill:active
 
   .column-300
     margin-right: 0 !important
-    margin-top: 120px !important
 
 .column-300
   @include flex-column
@@ -630,6 +639,7 @@ select:-webkit-autofill:active
   flex-wrap: wrap
 
   .tile-small
+    cursor: pointer
     width: 50px !important
     height: 50px !important
     margin: 5px !important
@@ -659,9 +669,9 @@ select:-webkit-autofill:active
       background-size: contain
       background-size: 10px 10px 
 
-
   .tile
     @include flex-center
+    cursor: pointer
     border-radius: $radius
     position: relative
     box-shadow: $shadow
@@ -734,3 +744,11 @@ g
 .annotation-text-g
   @include fadeInDelayed
 
+
+.user-tile
+  cursor: pointer
+  align-items: center !important
+  border-radius: 26px
+  background-color: $blue-2
+  &:hover
+    background-color: $blue-4 !important

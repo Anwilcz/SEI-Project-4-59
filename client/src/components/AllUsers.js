@@ -22,18 +22,16 @@ const AllUsers = () => {
 
 
   const loadingData = (
-    <h2 className='light light-grey normal indented margin-top margin-top-double'>Profile data loading, please wait..</h2>
+    <h2 className='light light-grey normal indented margin-top-double'>Profile data loading, please wait..</h2>
   )
 
   const userProfiles = () => {
     return (
-      <div className='margin-top-double margin-bottom'>
-        <div className='content-wrapper'>
-          <h2 className='bold white big'>All profiles <span className='light big'>({users.length})</span></h2>
-          {(users).map(user => {
-            return <UserTile key={user.id} user={user} />
-          })}
-        </div>
+      <div className='content-wrapper margin-top-double margin-bottom'>
+        <h2 className='bold white big margin-top-double'>All profiles <span className='light big'>({users.length})</span></h2>
+        {(users).map(user => {
+          return <UserTile key={user.id} user={user} />
+        })}
       </div>
     )
   }
