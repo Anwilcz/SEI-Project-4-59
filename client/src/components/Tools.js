@@ -36,24 +36,6 @@ const Tools = () => {
     getUser()
   }, [])
 
-  const sortArray = (array, key) => {
-    const sorted = array.sort((a, b) => a[key] - b[key])
-    return sorted
-  }
-
-  const createChart = (key, category, type, height, divId) => {
-    const x = []
-    const y = []
-    const sorted = sortArray(tools[category], 'worked_with')
-    sorted.forEach(tool => {
-      x.push(tool[key])
-      y.push(tool.name)
-    })
-    return (
-      <NewChart x={x} y={y} type={type} height={height} divId={divId} />
-    )
-  }
-
 
   return (
     <div>
@@ -70,7 +52,7 @@ const Tools = () => {
         <h2 className='medium white big indented margin-top'>The popularity of selected programming languages among <span className='light-blue'>83.439</span> surveyed developers who have experience in working with a certain tool.</h2>
         <p className='light white normal indented'>Professional developers: 59390, Students, coding primarily as a hobby &#38; others: 24049</p>
         <div id='chart-1' />
-        {tools.languages.length ? createChart('worked_with', 'languages', 'all', 2300, 'chart-1') : null}
+        {tools.languages.length ? <NewChart tools={tools} category={'languages'} type={'all'} height={2300} divId={'chart-1'} /> : null}
         {tools.languages.length ?
           <div>
             <h2 className='bold white large indented'>All languages <span className='light large'>({tools.languages.length})</span></h2>
@@ -88,7 +70,7 @@ const Tools = () => {
         <h2 className='medium white big indented margin-top'>The popularity of selected databases among <span className='light-blue'>83.439</span> surveyed developers who have experience in working with a certain tool.</h2>
         <p className='light white normal indented'>Professional developers: 59390, Students, coding primarily as a hobby &#38; others: 24049</p>
         <div id='chart-2' />
-        {tools.databases.length ? createChart('worked_with', 'databases', 'all', 1000, 'chart-2') : null}
+        {tools.databases.length ? <NewChart tools={tools} category={'databases'} type={'all'} height={1000} divId={'chart-2'} /> : null}
         {tools.databases.length ?
           <div>
             <h2 className='bold white large indented'>All databases <span className='light large'>({tools.databases.length})</span></h2>
@@ -106,7 +88,7 @@ const Tools = () => {
         <h2 className='medium white big indented margin-top'>The popularity of selected webframes among <span className='light-blue'>83.439</span> surveyed developers who have experience in working with a certain tool.</h2>
         <p className='light white normal indented'>Professional developers: 59390, Students, coding primarily as a hobby &#38; others: 24049</p>
         <div id='chart-3' />
-        {tools.languages.length ? createChart('worked_with', 'webframes', 'all', 1150, 'chart-3') : null}
+        {tools.languages.length ? <NewChart tools={tools} category={'webframes'} type={'all'} height={1150} divId={'chart-3'} /> : null}
         {tools.languages.length ?
           <div >
             <h2 className='bold white large indented'>All webframes <span className='light large'>({tools.webframes.length})</span></h2>

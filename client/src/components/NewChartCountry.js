@@ -11,7 +11,7 @@ const formatName = (array) => {
     name = name.map(word => {
       return word.charAt(0).toUpperCase() + word.slice(1)
     }).join(' ')
-    console.log(name)
+    // console.log(name)
     return name
   })
   return y
@@ -32,7 +32,7 @@ const createArray = (object) => {
   const data = Object.entries(object)
   data.pop()
   data.shift()
-  console.log(data)
+  // console.log(data)
   return data
 }
 

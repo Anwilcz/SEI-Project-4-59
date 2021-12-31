@@ -22,13 +22,13 @@ const Register = ({ state, setState, createNewUser }) => {
 
   const handleChange = (event) => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
-    console.log('Event Target Value ->', event.target.value)
+    // console.log('Event Target Value ->', event.target.value)
     setFormData(newFormData)
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log('Form Data ->', formData)
+    // console.log('Form Data ->', formData)
     try {
       await axios.post('/api/auth/register/', formData)
       createNewUser(formData.username)

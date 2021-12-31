@@ -7,7 +7,6 @@ const TileSmall = ({ tool, setRerender }) => {
   let url = (tool.image)
 
   if (url.includes('https://cdn.jsdelivr.net/')) {
-    console.log('yessss')
     url = url.toLowerCase()
   }
 

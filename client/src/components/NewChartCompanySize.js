@@ -8,7 +8,7 @@ const sortArray = (array, index) => {
 const formatName = (array) => {
   const y = array.map(name => {
     name = name.split('_').join(' ')
-    console.log(name)
+    // console.log(name)
     return name
   })
   return y
@@ -29,7 +29,7 @@ const createArray = (object) => {
   const data = Object.entries(object)
   data.pop()
   data.shift()
-  console.log(data)
+  // console.log(data)
   return data
 }
 

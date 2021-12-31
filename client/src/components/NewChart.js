@@ -1,6 +1,24 @@
 import Plotly from 'plotly.js'
 
-const NewChart = ({ x, y, type, height, divId }) => {
+const sortArray = (array, key) => {
+  const sorted = array.sort((a, b) => a[key] - b[key])
+  return sorted
+}
+
+const sortData = (tools, key, category) => {
+  const x = []
+  const y = []
+  const sorted = sortArray(tools[category], key)
+  sorted.forEach(tool => {
+    x.push(tool[key])
+    y.push(tool.name)
+  })
+  return { x, y }
+}
+
+const NewChart = ({ tools, category, type, height, divId }) => {
+  const key = 'worked_with'
+  const { x, y } = sortData(tools, key, category) 
   const devsData = { pro: 59390, other: 24049, all: 83439 }
   const devs = devsData[type]
   const div = document.getElementById(divId)
@@ -82,7 +100,7 @@ const NewChart = ({ x, y, type, height, divId }) => {
   }
 
 
-  console.log('current window inner width -> ', window.innerWidth)
+  // console.log('current window inner width -> ', window.innerWidth)
   let colors = new Array
   if (divId === 'chart-1') {
     colors = ['002b54', '00315b', '003762', '003c69', '00426f', '004975', '004f7b', '005580', '005b85', '006189', '00688d', '006e90', '007493', '007b95', '008197', '008798', '008d98', '009499', '009a98', '00a097', '00a696', '00ac94', '00b292', '00b890', '00be8d', '26c38a', '40c987', '54ce84', '66d380', '77d97d', '88dd7a', '98e277', 'a8e774', 'b8eb72', 'c8ef70', 'd9f36e', 'e9f76e', 'fafa6e']

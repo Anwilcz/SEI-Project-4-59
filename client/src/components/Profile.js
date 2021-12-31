@@ -42,6 +42,7 @@ const Profile = () => {
         const username = new URLSearchParams(search).get('name')
         const { data } = await axios.get(`/api/profile/${username}/`)
         setUser(data)
+        setFormData({ ...data.profile })
       } catch (err) {
         console.log(err)
         setUser('not found')
@@ -57,10 +58,10 @@ const Profile = () => {
         try {
           const payload = getPayLoad()
           const currentUserId = payload.sub
-          console.log('username', user.username)
+          // console.log('username', user.username)
           if (currentUserId === user.id) {
             setIsOwner(true)
-            console.log(isOwner)
+            // console.log(isOwner)
           }
         } catch (err) {
           console.log(err)
@@ -84,7 +85,7 @@ const Profile = () => {
   const handleInputChanges = (event) => {
     // console.log({ [event.target.name]: event.target.value })
     setFormData({ ...formData, [event.target.name]: event.target.value })
-    console.log(formData)
+    // console.log(formData)
   }
 
   const handleSubmitImage = async (event) => {
@@ -92,9 +93,9 @@ const Profile = () => {
     const data = new FormData()
     data.append('image', file['image'], file['image'].name)
     const favourited = { favourited: user.profile.favourited }
-    console.log(data)
+    // console.log(data)
     try {
-      console.log(file)
+      // console.log(file)
       await axios.put(`/api/profile/${user.username}/`, data,
         {
           headers: {
@@ -176,9 +177,9 @@ const Profile = () => {
           {isOwner ?
             <div className='profile-buttons'>
               <button className='submit-button white normal bold' onClick={() => {
-                console.log(imageUpload)
+                // console.log(imageUpload)
                 setImageUpload(!imageUpload)
-                console.log(imageUpload)
+                // console.log(imageUpload)
               }
               }>Change image</button>
               {imageUpload ? addProfilePicture : null}

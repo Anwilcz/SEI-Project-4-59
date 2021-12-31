@@ -14,7 +14,7 @@ const Tool = () => {
   const params = useParams()
   const id = params.id
   const devsData = { pro: 59390, other: 24049, all: 83439 }
-  console.log(id)
+  // console.log(id)
   const { search } = window.location
   const name = new URLSearchParams(search).get('name')
 

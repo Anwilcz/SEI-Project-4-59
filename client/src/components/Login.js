@@ -19,20 +19,20 @@ const Login = ({ state, setState, setUsername }) => {
 
   const handleChange = (event) => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
-    console.log('Event Target Value ->', event.target.value)
+    // console.log('Event Target Value ->', event.target.value)
     setFormData(newFormData)
   }
 
   // this takes in a token arguement
   const setItemToLocalStorage = (token) => {
-    console.log(token)
+    // console.log(token)
     // In order to access local storage we access it through the window
     window.localStorage.setItem('token', token)
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log('Form Data ->', formData)
+    // console.log('Form Data ->', formData)
     try {
       const { data } = await axios.post('/api/auth/login/', formData, {
         headers: {
@@ -45,7 +45,7 @@ const Login = ({ state, setState, setUsername }) => {
       handleClick()
       location.reload()
     } catch (err) {
-      console.log('Error ->', err)
+      // console.log('Error ->', err)
       setErrorData(err.response.data)
       console.log(errorData)
     }
