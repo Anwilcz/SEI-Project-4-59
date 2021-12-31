@@ -84,7 +84,7 @@ const NewChartCompanySize = ({ tool, height, divId }) => {
     margin: {
       t: 0,
       r: 125,
-      l: 165,
+      l: 170,
     },
     yaxis: {
       xref: 'paper',

@@ -42,7 +42,7 @@ const Profile = () => {
         const username = new URLSearchParams(search).get('name')
         const { data } = await axios.get(`/api/profile/${username}/`)
         setUser(data)
-        setFormData({ ...data.profile })
+        setFormData(data.profile)
       } catch (err) {
         console.log(err)
         setUser('not found')
