@@ -58,6 +58,19 @@ $family: 'Readex Pro', sans-serif
   font-weight: 600
 
 // ! Font color
+.error
+  word-break: keep-all
+  text-decoration: underline
+  text-align: right
+  margin-top: 5px
+  max-width: 205px
+  position: absolute
+  top: 0px
+  right: 0
+  font-weight: 100
+  color: $blue-6
+  font-size: 11px
+  z-index: 100
 
 .white
   color: $white-1
@@ -752,3 +765,7 @@ g
   background-color: $blue-2
   &:hover
     background-color: $blue-4 !important
+
+@media (max-width: $mobile-breakpoint)
+  .user-tile
+    padding-top: 15px !important

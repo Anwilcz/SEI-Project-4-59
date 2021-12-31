@@ -37,6 +37,7 @@ const Register = ({ state, setState, createNewUser }) => {
       console.log('Error ->', err)
       setErrorData(err.response.data)
       console.log(errorData)
+      console.log(errorData.password)
     }
   }
 
@@ -51,6 +52,7 @@ const Register = ({ state, setState, createNewUser }) => {
         <form onSubmit={handleSubmit} className='popup-form-container'>
           <div>
             <div className='input-field first'>
+              <p className='error'>{ formData.username ? errorData.username : '*'}</p>
               <p className='input-label normal small dark-blue'>Username</p>
               <input
                 type='text'
@@ -63,6 +65,7 @@ const Register = ({ state, setState, createNewUser }) => {
           </div>
 
           <div className='input-field'>
+            <p className='error'>{ formData.email ? errorData.email : '*'}</p>
             <p className='input-label normal small dark-blue'>Email</p>
             <input
               type='text'
@@ -74,6 +77,7 @@ const Register = ({ state, setState, createNewUser }) => {
           </div>
 
           <div className='input-field'>
+            <p className='error'>{ formData.password ? errorData.password : '*'}</p>
             <p className='input-label normal small dark-blue'>Password</p>
             <input
               type='password'
@@ -85,6 +89,7 @@ const Register = ({ state, setState, createNewUser }) => {
           </div>
 
           <div className='input-field last'>
+            <p className='error'>{ formData.password_confirmation ? errorData.password_confirmation : '*'}</p>
             <p className='input-label normal small dark-blue'>Password confirmation</p>
             <input
               type='password'

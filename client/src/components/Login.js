@@ -13,8 +13,7 @@ const Login = ({ state, setState, setUsername }) => {
   })
 
   const [errorData, setErrorData] = useState({
-    username: '',
-    password: '',
+    message: '',
   })
 
   const handleChange = (event) => {
@@ -62,6 +61,7 @@ const Login = ({ state, setState, setUsername }) => {
         <form onSubmit={handleSubmit} className='popup-form-container'>
           <div>
             <div className='input-field first'>
+              <p className='error'>{ formData.username ? errorData.message : '*'}</p>
               <p className='input-label normal small dark-blue'>Username</p>
               <input
                 type='text'
@@ -73,6 +73,7 @@ const Login = ({ state, setState, setUsername }) => {
             </div>
           </div>
           <div className='input-field last'>
+            <p className='error'>{ formData.password ? errorData.password : '*'}</p>
             <p className='input-label normal small dark-blue'>Password</p>
             <input
               type='password'
