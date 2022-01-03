@@ -34,10 +34,10 @@ const Register = ({ state, setState, createNewUser }) => {
       createNewUser(formData.username)
       handleClick()
     } catch (err) {
-      console.log('Error ->', err)
+      // console.log('Error ->', err)
       setErrorData(err.response.data)
-      console.log(errorData)
-      console.log(errorData.password)
+      // console.log(errorData)
+      // console.log(errorData.password)
     }
   }
 

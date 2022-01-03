@@ -26,8 +26,8 @@ export const addFavourites = async (event, setRerender) => {
       )
       setRerender(true)
     } catch (err) {
-      console.log(err)
-      console.log(err.response)
+      // console.log(err)
+      // console.log(err.response)
     }
   }
 }

@@ -40,7 +40,7 @@ const Profile = () => {
         const { data } = await axios.get(`/api/profile/${username}/`)
         setUser(data)
       } catch (err) {
-        console.log(err)
+        // console.log(err)
         setUser('not found')
       }
     }
@@ -60,7 +60,7 @@ const Profile = () => {
             // console.log(isOwner)
           }
         } catch (err) {
-          console.log(err)
+          // console.log(err)
         }
       }
     }
@@ -112,8 +112,8 @@ const Profile = () => {
       setImageUpload(false)
       setRerender(true)
     } catch (err) {
-      console.log(err)
-      console.log(err.response)
+      // console.log(err)
+      // console.log(err.response)
     }
   }
 
@@ -130,8 +130,8 @@ const Profile = () => {
       setEditProfile(false)
       setRerender(true)
     } catch (err) {
-      console.log(err)
-      console.log(err.response)
+      // console.log(err)
+      // console.log(err.response)
     }
   }
 

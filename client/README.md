@@ -1,24 +1,26 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) GA London React Template
+# Project 4 - Django and React Full-Stack Application
 
-## Update the Proxy Server
+Group size: ***[Anna Wilczynska](https://github.com/anwilcz)*** 
+</br>
+Duration: ***10 days***
+</br>
+</br>
+Technologies used: ***JavaScript, React, Plotly.js, Express, Node, Python, Django, CSS, SAAS***
+</br>
+</br>
 
-By default, the proxy server is set up to point at port 8000, if you need to do so update in `setupProxy.js` where commented.
 
-## Using NPM
+## Overview
 
-`npm run start` or `npm run dev`  to run the development server
+The aim was to build a full-stack application with a React frontend and a Django back-end implementing RESTful API to serve all CRUD routes. This application reuses public survey data from Stack Overflow to present detailed results for each developer's tool. Python program is applied to iterate through the original CSV file and calculate the number of votes assigned to a particular branch and developers tool. The program converts Python native objects into JSON objects and saves the output into a new seed file. Data visualisation components are powered with the graphing library - Plotly.js, which combines the selection of bar and pie charts. The app uses register/ login authentication to validate requests for network resources. An authenticated user can create their profile with the collection of favourite tools and share their profile details with the rest of the community.
 
-`npm run build` to create a build directory
 
-## Using Yarn
 
-`yarn start` or `yarn dev`  to run the development server
+</br>
+</br>
+</br>
 
-`yarn build` to create a build directory
+[ View deployment ](https://dev-insights.herokuapp.com/)
 
-### ⚠️
-
-To prevent the `failed-to-compile` issue for linter errors like `no-unsed-vars`, rename the `.env.example` to `.env` and restart your development server. Note this will only change the behaviour of certain linter errors to now be warnings, and is added just to allow your code to compile in development. These errors should still be fixed and other errors will still result in the code being unable to compile
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+</br>
+</br>

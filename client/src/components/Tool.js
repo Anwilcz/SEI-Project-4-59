@@ -25,7 +25,7 @@ const Tool = () => {
         setTool(data)
 
       } catch (err) {
-        console.log(err)
+        // console.log(err)
       }
 
     }
@@ -48,7 +48,7 @@ const Tool = () => {
         const { data } = await axios.get(`/api/profile/${username}/`)
         setUser(data)
       } catch (err) {
-        console.log(err)
+        // console.log(err)
         setUser(null)
       }
     }

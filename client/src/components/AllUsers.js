@@ -14,7 +14,7 @@ const AllUsers = () => {
         const { data } = await axios.get('/api/profile/')
         setUsers(data)
       } catch (err) {
-        console.log(err)
+        // console.log(err)
       }
     }
     getUser()
