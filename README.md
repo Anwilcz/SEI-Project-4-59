@@ -122,7 +122,7 @@ A separate Python program was built to iterate through the original CSV file and
 </br>
 Python runs through all the rows of the CSV file and calculates the number of votes assigned to the tool in the examined branch. The program converts Python native objects into JSON objects and saves the output into a new file that is used to seed the database.</br>
 </br>
-The original CSV file was downloaded from [here](insights.stackoverflow.com/survey).</br>
+The original CSV file was downloaded from [here](https://insights.stackoverflow.com/survey).</br>
 </br>
 This is an example of a generated JSON object for `HTML/CSS`:</br>
 
