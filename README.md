@@ -4,7 +4,7 @@ Group size: solo project - ***[Anna Wilczynska](https://github.com/anwilcz)***
 </br>
 Duration: ***7 days***
 </br>
-Technologies used: ***JavaScript, React, Sass, Plotly.js, Express, Node.js, Python, Django***
+Technologies used: ***JavaScript, React, Sass, Plotly.js, Express, Node.js, Python, Django, PostgreSQL***
 </br>
 </br>
 ![Main image](https://res.cloudinary.com/dulbdr0in/image/upload/v1642026312/ReadMe%20Images/SEI_ReadMes/Insights/dev_insights-main_ivrdkw.png)
@@ -70,7 +70,7 @@ The app allows users to register and create a customizable profile that can be v
 - **Sass** - styling
 
 ### Database
-- **Postgresql**
+- **PostgreSQL**
 
 ### Frameworks and libraries
 - **React** - builds frontend of a single-page application
@@ -365,7 +365,7 @@ class ProfileSerializer(serializers.ModelSerializer):
            fields = ('user', 'slogan', 'location', 'image', 'favourited',)
 ```
 ### Relationships
-One to One relationship links Profile with the User
+One to One relationship links Profile with the User.
 Many to Many relationships exist between user profiles and favorited tools.</br>
 
 ```
@@ -377,7 +377,7 @@ class Profile(models.Model):
      favourited = models.ManyToManyField(Tool, blank=True)
 ```
 
-Nested objects are linked to the Tool by OneToOneField</br>
+Nested objects are linked to the Tool by OneToOneField.</br>
 
 ```
 class WorkedWithCompanySize(models.Model):
@@ -457,7 +457,7 @@ The database is seeded with data collection processed by the Python program and 
 
 ### Frontend
 ### Frontend frameworks and libraries
-The frontend of the project was built with React and libraries such as Plotly.js and Animate.CSS
+The frontend of the project was built with React and libraries such as Plotly.js and Animate.CSS.
 Plotly.js is a JavaScript graphing library that allows the implementation of different kinds of data visualisation components. The project uses horizontal bar charts and pie charts that were adjusted to the application aesthetic goals. Animate.CSS was used to animate components transitions.
 
 ### Data visualisation
