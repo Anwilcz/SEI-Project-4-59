@@ -463,6 +463,93 @@ Plotly.js is a JavaScript graphing library that allows the implementation of dif
 ### Data visualisation
 Data visualisation components are powered with the graphing library - Plotly.js, which combines the selection of bar and pie charts. 
 
+Exemplary function responsible of rendering a chart within the element selected by id equal to `divId`: </br>
+
+```
+const NewChart = ({ tools, category, type, height, divId }) => {
+ const key = 'worked_with'
+ const { x, y } = sortData(tools, key, category)
+ const devsData = { pro: 59390, other: 24049, all: 83439 }
+ const devs = devsData[type]
+ const div = document.getElementById(divId)
+ const data = [
+   {
+     x: x,
+     y: y,
+     type: 'bar',
+     orientation: 'h',
+   }
+ ]
+ const layout = {
+   autosize: false,
+   responsive: false,
+   width: 0.9 * window.innerWidth,
+   height: height,
+   xaxis1: {
+     xref: 'paper',
+     yref: 'paper',
+     zeroline: false,
+     showline: false,
+     showticklabels: false,
+     showgrid: false,
+   },
+   margin: {
+     t: 30,
+     b: 30,
+     r: 125,
+   },
+   yaxis: {
+     xref: 'paper',
+     yref: 'paper',
+     ticks: 'outside',
+     tickcolor: 'transparent',
+     ticklen: 10,
+     tickfont: {
+       family: 'Readex Pro, sans-serif',
+       size: 14,
+       color: 'white',
+     },
+     automargin: true,
+   },
+   paper_bgcolor: 'transparent',
+   plot_bgcolor: 'transparent',
+   annotations: [
+   ],
+ }
+ 
+ for (let i = 0; i < x.length; i++) {
+   const result = {
+     xref: 'x',
+     yref: 'y',
+     x: x[i],
+     y: y[i],
+     text: `${x[i]} votes (${(x[i] / devs * 100).toFixed(1)}%)`,
+     font: {
+       family: 'Readex Pro, sans-serif',
+       size: 12,
+       color: '#3b9dff',
+       xshift: '20px',
+     },
+    
+     xanchor: 'left',
+     xshift: 10,
+     textposition: 'top',
+     showarrow: false,
+   }
+   layout.annotations.push(result)
+ }
+ 
+ Plotly.newPlot(div, data, layout, { displayModeBar: false, staticPlot: true })
+ 
+ // Adding gradient
+ const points = div.getElementsByClassName('point')
+ for (let i = 0; i < x.length; i++) {
+   const path = points[i].firstChild
+   path.style = `fill: #${colors[i]}`
+ }
+}
+```
+
 ### Responsive design
 The application is adapted to different screen sizes and fully responsive on computer screens as well as mobile devices. The consistency of the data displayed on different screen sizes is maintained.</br>
 </br>
